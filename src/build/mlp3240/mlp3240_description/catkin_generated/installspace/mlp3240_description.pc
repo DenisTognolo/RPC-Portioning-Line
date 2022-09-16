@@ -1,0 +1,8 @@
+prefix=/home/denis/catkin_ws6/src/install
+
+Name: mlp3240_description
+Description: Description of mlp3240_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

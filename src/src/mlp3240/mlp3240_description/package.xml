@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mlp3240_description</name>
+  <version>1.0.0</version>
+  <description>Mlp3240 description package</description>
+  <license>BSD</license>
+  <url type="website">https://github.com/AntoninoParisi/rpc/tree/master/mlp3240_visual</url>
+  <author email="antonino.parisi@studenti.univr.it">Antonino Parisi</author>
+  <maintainer email="denis.tognolo@studenti.univr.it">Denis Tognolo</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>urdf</exec_depend>
+
+</package>

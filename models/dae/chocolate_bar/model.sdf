@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="chocolate_bar">
+    <link name="link">
+	<inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000085</ixx>
+            <iyy>0.000163</iyy>
+            <izz>0.000247</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+          <pose>0 0 0.005 0 0 0</pose>
+        </inertial>
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://chocolate_bar/meshes/chocolate_bar.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://chocolate_bar/meshes/chocolate_bar.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+  
+  <gazebo reference="link">
+      <kp>1000.0</kp>
+      <kd>1000.0</kd>
+      <mu1>100.0</mu1>
+      <mu2>100.0</mu2>
+      <minDepth>0.001</minDepth>
+  </gazebo>
+</sdf>
+
+

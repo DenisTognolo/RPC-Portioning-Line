@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<robot  xmlns:xacro="http://ros.org/wiki/xacro">
+	
+	<xacro:macro name="mlp3240" params="prefix ">
+	<xacro:property name="physical_parameters" value="${load_yaml('$(find mlp3240_description)/config/physical_params.yaml')}"/>    
+	
+	<material name="white">
+	    <color rgba="1 1 1 1"/>
+	</material>        
+	    
+	    <link name="${prefix}base_link_gripper">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.01"/>
+			<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="0 0 0" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/bottom.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="black">
+		        <color rgba="${61/255} ${61/255} ${61/255} 1.0"/>
+		    </material>
+		</visual>
+	        <collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/bottom.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>
+	    </link>
+	    <link name="${prefix}left">
+	    	<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="-0.01 0 0.014" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/lateral.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="black">
+		        <color rgba="${61/255} ${61/255} ${61/255} 1.0"/>
+		    </material>
+		</visual>
+	        <collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/lateral.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>		
+	    </link>
+
+	    <link name="${prefix}right">
+	    	<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="0.01 0 0.014" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/lateral.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="black">
+		        <color rgba="${61/255} ${61/255} ${61/255} 1.0"/>
+		    </material>
+		</visual>
+	        <collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/lateral.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>			
+	    </link>
+	    <link name="${prefix}back">
+	    	<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="0 -0.005 0.0065" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/front.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="black">
+		        <color rgba="${61/255} ${61/255} ${61/255} 1.0"/>
+		    </material>
+		</visual>
+		<collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/front.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>	
+	    </link>
+	    <link name="${prefix}front">
+	    	<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="0 0.005 0.0065" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/front_w_box.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="black">
+		        <color rgba="${61/255} ${61/255} ${61/255} 1.0"/>
+		    </material>
+		</visual>
+		<collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/front_w_box.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>			
+	    </link>
+	    <link name="${prefix}top">
+	    	<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="0 0 0.006" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/top.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="black">
+		        <color rgba="${61/255} ${61/255} ${61/255} 1.0"/>
+		    </material>
+		</visual>
+		<collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/top.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>		
+	    </link>
+	    
+	    <link name="${prefix}finger1">
+	    	<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="0.015 0 0.001" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/finger_1.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="white"/>
+		</visual>
+		<collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/finger_1.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>				
+		
+	    </link>
+	    <link name="${prefix}finger2">
+	    	<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+		 </inertial>
+		<visual>
+		    <origin xyz="0.015 0 0.001" rpy="0 0 1.57" />
+		    <geometry>
+		        <mesh filename="package://mlp3240_description/mesh/visual/finger_2.stl" scale="0.001 0.001 0.001"/>
+		    </geometry>
+		    <material name="white"/>
+		</visual>
+		<collision>
+		  <geometry>
+		    <mesh filename="package://mlp3240_description/mesh/visual/finger_2.stl" scale="0.001 0.001 0.001"/>
+		  </geometry>
+	        </collision>
+	    </link>
+
+
+	<joint name="${prefix}base_to_left_joint" type="fixed">
+	    <parent link="${prefix}base_link_gripper"/>
+	    <child link="${prefix}left"/>
+	    <origin xyz="${physical_parameters['base_x']/2} 0 0.015" rpy='0 0 0'/>
+	</joint>
+	<joint name="${prefix}base_to_right_joint" type="fixed">
+	    <parent link="${prefix}base_link_gripper"/>
+	    <child link="${prefix}right"/>
+	    <origin xyz="-${physical_parameters['base_x']/2} 0 0.015" rpy='0 0 0'/>
+	</joint>
+	<joint name="${prefix}base_to_front_joint" type="fixed">
+	    <parent link="${prefix}base_link_gripper"/>
+	    <child link="${prefix}front"/>
+	    <origin xyz="0 ${physical_parameters['base_y']/2} 0.015" rpy='0 0 0'/>
+	</joint>
+	<joint name="${prefix}base_to_back_joint" type="fixed">
+	    <parent link="${prefix}base_link_gripper"/>
+	    <child link="${prefix}back"/>
+	    <origin xyz="0 -${physical_parameters['base_y']/2} 0.015" rpy='0 0 0'/>
+	</joint>
+	<joint name="${prefix}left_to_top_joint" type="fixed">
+	    <parent link="${prefix}left"/>
+	    <child link="${prefix}top"/>
+	    <origin xyz="-${physical_parameters['left_y']} 0 0.03" rpy='0 0 0'/>
+	</joint>
+	<joint name="${prefix}top_to_finger1_joint" type="prismatic">
+	    <parent link="${prefix}top"/>
+	    <child link="${prefix}finger1"/>
+	    <origin xyz="${physical_parameters['top_x']/2 - 0.005} 0 0.0211" rpy='0 0 -3.14'/>
+	    <limit upper="0.0336" lower="0.0" effort="300" velocity="1"/>
+	</joint>
+	<joint name="${prefix}top_to_finger2_joint" type="prismatic">
+	    <parent link="${prefix}top"/>
+	    <child link="${prefix}finger2"/>
+	    <origin xyz="-${physical_parameters['top_x']/2 - 0.005} 0 0.021" rpy='0 0 0'/>
+	    <limit upper="0.0336" lower="0.0" effort="300" velocity="1"/>
+	    <mimic joint="${prefix}top_to_finger1_joint" multiplier="1.0" offset="0.0" />
+	</joint>
+	
+	<!-- <xacro:macro name="mlp3240_gripper_transmission" params="${prefix}"/> -->
+	
+	<!-- Transmission for ROS control -->
+	<transmission name="${prefix}top_to_finger1_joint_trans">
+	      <type>transmission_interface/SimpleTransmission</type>
+	      <joint name="${prefix}top_to_finger1_joint">
+			<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+	      </joint>
+	      <actuator name="${prefix}top_to_finger1_joint_motor">
+			<mechanicalReduction>1</mechanicalReduction>
+			<hardwareInterface>hardware_interface/EfforJointInterface</hardwareInterface> 
+	      </actuator>
+	</transmission>    
+
+	<!-- Mimic joints -->
+	<gazebo>
+		<plugin filename="libgazebo_mimic_joint_plugin.so" name="${prefix}mimic_top_to_finger1_joint">
+			<joint>${prefix}top_to_finger1_joint</joint>
+			<mimicJoint>${prefix}top_to_finger2_joint</mimicJoint>
+		</plugin>
+	</gazebo>
+	
+	</xacro:macro>
+
+</robot>

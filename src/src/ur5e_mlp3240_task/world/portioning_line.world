@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<sdf version='1.5'>
+  <world name='portioning_line'>	
+    
+    <gui fullscreen='0'>
+    	<camera name="user_camera">
+    	    <projection_type>orthographic</projection_type>
+            <pose>0 4 1.5  0 0.4 -1.57</pose>
+    	</camera>
+    </gui>
+  
+    <include>
+    	<uri>model://sun</uri>
+    </include>	
+  
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <light name='Sun_light' type='point'>
+      <pose>0 1 2 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+
+    
+    <!-- import the Walls -->
+    <include>
+    	<uri>model://walls</uri>
+    	<pose>-2.0 0.0 0.0 0.0 0.0 1.57</pose>
+    	<scale>1 2 1</scale>
+    	<static>true</static>  
+    </include>
+    
+    <!-- import the Table -->
+    <include>
+    	<uri>model://table</uri>
+    	<pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+    	<scale>1 1 1</scale>
+    	<static>true</static>
+    </include>
+    
+    <!-- import the Shelf -->
+    <include>
+    	<uri>model://shelf</uri>
+    	<pose>0.5 0.0 0.0 0.0 0.0 3.14</pose>
+    	<scale>1 1 1</scale>
+    	<static>true</static>
+    </include>
+    
+    <!-- import the Vision Box -->
+    <include>
+    	<uri>model://vision_box</uri>
+    	<pose>-0.5 -0.2 0.0 0.0 0.0 0</pose>
+    	<scale>1 1 1</scale>
+    	<static>true</static>
+    </include>
+    
+    <!-- import the portioning_machine -->
+    <include>
+    	<uri>model://portioning_machine</uri>
+    	<pose>-0.55 0.2 0.0 0.0 0.0 0.0</pose>
+    	<scale>1 1 1</scale>
+    	<static>true</static>
+    </include>
+     
+    <!-- import the Chocolate Bar A1-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A1</name>
+    	<pose>0.44 0.30 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+        <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+ 
+  </world>
+</sdf>

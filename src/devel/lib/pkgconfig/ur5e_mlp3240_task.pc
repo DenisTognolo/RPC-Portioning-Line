@@ -1,0 +1,8 @@
+prefix=/home/denis/catkin_ws6/src/devel
+
+Name: ur5e_mlp3240_task
+Description: Description of ur5e_mlp3240_task
+Version: 0.0.0
+Cflags: -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: moveit_core moveit_ros_planning_interface interactive_markers tf2_geometry_msgs actionlib_msgs control_msgs

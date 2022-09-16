@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/denis/catkin_ws6/src/devel/setup.sh

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="mpl3240" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:include filename="$(find mlp3240_description)/urdf/mlp3240_macro.xacro"/>
+    <xacro:macro name="mlp_3240_world" params="prefix">
+        <xacro:mlp3240 prefix="${prefix}"/>
+
+        <link name="map"/>
+
+        <joint name="${prefix}base_to_world_joint" type="fixed">
+            <parent link="map"/>
+            <child link="${prefix}base_link_gripper"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </joint>
+        
+    </xacro:macro>
+    <xacro:mlp_3240_world prefix="gripper_"/>
+</robot>
