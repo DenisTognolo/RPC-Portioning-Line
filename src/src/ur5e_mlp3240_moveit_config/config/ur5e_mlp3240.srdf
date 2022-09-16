@@ -28,7 +28,7 @@
         <joint name="top_to_finger1_joint" value="0"/>
     </group_state>
     <group_state name="close" group="mlp3240_gripper">
-        <joint name="top_to_finger1_joint" value="0.0336"/>
+        <joint name="top_to_finger1_joint" value="0.03"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="ur5e_mlp3240_ee" parent_link="ee_link" group="mlp3240_gripper" parent_group="ur5e_arm"/>

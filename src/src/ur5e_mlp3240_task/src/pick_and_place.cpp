@@ -196,7 +196,7 @@ int main(int argc, char** argv)
     // 5. Close the  gripper
     std::cout << "CLOSING THE GRIPPER..." << std::endl;
     robot_ur5e.move_gripper("close");
-    ros::Duration(1.0).sleep(); 
+    ros::Duration(2.0).sleep(); 
     approach_offset += chocolate_bar_size[0]*3/4;
 
     // 6. Place the EE out of the shelf
