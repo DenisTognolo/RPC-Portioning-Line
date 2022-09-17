@@ -31,7 +31,7 @@
 	<!-- Add a fake link for proper IK -->
 	<link name="ee_tool"/>
 	<joint name="ee_link_to_ee_tool" type="fixed">
-	      <origin xyz="0.007 0 0" rpy="0 0 0"/>
+	      <origin xyz="0.01 0 0" rpy="0 0 0"/>
 	      <parent link="ee_link"/>
 	      <child link="ee_tool"/>
 	</joint>
@@ -39,29 +39,7 @@
 </xacro:macro>
 
 <xacro:ur5e_mlp3240 prefix=""/>
-
-	<!-- to properly work on Gazebo -->
-
-    <gazebo>
-  	<plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
-	  	<arm>
-	  		<arm_name>robot</arm_name>
-	  		<palm_link>wrist_3_link</palm_link>
-	      	<gripper_link>finger1</gripper_link>
-	      	<gripper_link>finger2</gripper_link>
-	  	</arm>
-  	<forces_angle_tolerance>100</forces_angle_tolerance>
-  	<update_rate>10</update_rate>
-  	<grip_count_threshold>1</grip_count_threshold>
-  	<max_grip_count>5</max_grip_count>
-  	<release_tolerance>0.005</release_tolerance>
-  	<disable_collisions_on_attach>true</disable_collisions_on_attach>
-  	<contact_topic>__default_topic__</contact_topic>
-  	</plugin>
-    </gazebo>	
   
-    <gazebo>
-	  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so" />
-    </gazebo>
+    
     
 </robot>
