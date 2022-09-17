@@ -25,7 +25,7 @@ int main(int argc, char** argv)
   shelf_origin.position.z = 0.0;  
   
   geometry_msgs::Pose vision_box_origin;
-  vision_box_origin.position.x = -0.50;
+  vision_box_origin.position.x = -0.5;
   vision_box_origin.position.y = -0.2;
   vision_box_origin.position.z = 0.0;
   
@@ -253,6 +253,7 @@ int main(int argc, char** argv)
     // 14. Move the EE out of the portioning machine
     std::cout << "BACK OFF FROM PORTIONING MACHINE..." << std::endl;
     tmp_pose = portioning_machine_hole_pose;
+    approach_offset -= chocolate_bar_size[0]*3/4;
     tmp_pose.position.x += approach_offset;
     robot_ur5e.go_to_pose(tmp_pose);
 

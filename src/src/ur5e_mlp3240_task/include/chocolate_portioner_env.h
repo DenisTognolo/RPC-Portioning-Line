@@ -190,7 +190,7 @@ public:
     tmp_pose.position.z += (shelf_inventory_map[chosen_chocolate_bar_code]-1)*chocolate_bar_size[2];
     shelf_inventory_map[chosen_chocolate_bar_code]--;
 
-    tmp_pose.position.z += 0.021;  // 0.019 = basement height (but better be higher)
+    tmp_pose.position.z += 0.02;  // 0.019 = basement height (but better be higher)
     tmp_pose = set_RPY(tmp_pose, desired_RPY);
     return tmp_pose;
   }

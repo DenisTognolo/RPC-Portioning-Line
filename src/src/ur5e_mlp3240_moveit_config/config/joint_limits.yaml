@@ -11,13 +11,15 @@ default_acceleration_scaling_factor: 0.1
 
 joint_limits:
   shoulder_pan_joint:
+    min_position: -2.35
+    max_position: 4.72
     has_velocity_limits: true
     max_velocity: 5.2
     has_acceleration_limits: false
     max_acceleration: 1
   shoulder_lift_joint:
-    min_position: -3.14
-    max_position: 0
+    min_position: -3.1415
+    max_position: -1.57
     has_velocity_limits: true
     max_velocity: 5.2
     has_acceleration_limits: false
@@ -38,7 +40,7 @@ joint_limits:
     max_acceleration: 1
   wrist_2_joint: 
     min_position: -1.57
-    max_position: 3.14     
+    max_position: 3.1415     
     has_velocity_limits: true
     max_velocity: 5.2
     has_acceleration_limits: false
@@ -51,6 +53,6 @@ joint_limits:
     
   robotiq_85_left_knuckle_joint:
     has_velocity_limits: true
-    max_velocity: 2.5
+    max_velocity: 0.01
     has_acceleration_limits: false
     max_acceleration: 1    

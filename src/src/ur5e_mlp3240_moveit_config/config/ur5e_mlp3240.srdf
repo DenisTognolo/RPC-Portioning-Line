@@ -19,7 +19,7 @@
     <group_state name="home" group="ur5e_arm">
         <joint name="shoulder_pan_joint" value="1.57" />
         <joint name="shoulder_lift_joint" value="-2.1" />
-        <joint name="elbow_joint" value="2.5" />
+        <joint name="elbow_joint" value="2.6" />
         <joint name="wrist_1_joint" value="-0.25" />
         <joint name="wrist_2_joint" value="1.5794" />
         <joint name="wrist_3_joint" value="0" />
@@ -28,7 +28,7 @@
         <joint name="top_to_finger1_joint" value="0"/>
     </group_state>
     <group_state name="close" group="mlp3240_gripper">
-        <joint name="top_to_finger1_joint" value="0.03"/>
+        <joint name="top_to_finger1_joint" value="0.0299"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="ur5e_mlp3240_ee" parent_link="ee_link" group="mlp3240_gripper" parent_group="ur5e_arm"/>
