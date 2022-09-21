@@ -28,10 +28,10 @@
         <joint name="top_to_finger1_joint" value="0"/>
     </group_state>
     <group_state name="close" group="mlp3240_gripper">
-        <joint name="top_to_finger1_joint" value="0.0295"/>
+        <joint name="top_to_finger1_joint" value="0.03"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="ur5e_mlp3240_ee" parent_link="ee_link" group="mlp3240_gripper" parent_group="ur5e_arm"/>
+    <end_effector name="ur5e_mlp3240_ee" parent_link="ee_tool" group="mlp3240_gripper" parent_group="ur5e_arm"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="Virtual_Joint" type="fixed" parent_frame="base_link" child_link="world"/>
     <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->

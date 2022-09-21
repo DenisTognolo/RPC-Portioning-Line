@@ -2,8 +2,8 @@
 
 # For beginners, we downscale velocity and acceleration limits.
 # You can always specify higher scaling factors (<= 1.0) in your motion requests.  # Increase the values below to 1.0 to always move at maximum speed.
-default_velocity_scaling_factor: 0.1
-default_acceleration_scaling_factor: 0.1
+default_velocity_scaling_factor: 1.0
+default_acceleration_scaling_factor: 1.0
 
 # Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
@@ -11,15 +11,15 @@ default_acceleration_scaling_factor: 0.1
 
 joint_limits:
   shoulder_pan_joint:
-    min_position: -2.35
-    max_position: 4.72
+    #min_position: -2.09
+    #max_position: 2.52
     has_velocity_limits: true
     max_velocity: 5.2
     has_acceleration_limits: false
     max_acceleration: 1
   shoulder_lift_joint:
-    min_position: -3.1415
-    max_position: -1.57
+    min_position: -3.40
+    max_position: -1.05
     has_velocity_limits: true
     max_velocity: 5.2
     has_acceleration_limits: false
@@ -32,8 +32,8 @@ joint_limits:
     has_acceleration_limits: false
     max_acceleration: 1
   wrist_1_joint:
-    min_position: -2.35
-    max_position: 2.35  
+    min_position: -1.57
+    max_position: 1.57
     has_velocity_limits: true
     max_velocity: 5.2
     has_acceleration_limits: false

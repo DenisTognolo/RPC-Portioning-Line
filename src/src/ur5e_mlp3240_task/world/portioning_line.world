@@ -16,6 +16,37 @@
     <include>
       <uri>model://ground_plane</uri>
     </include>
+
+    <!--
+    <model name='METER_box'>
+      <link name='link'>
+        <pose>1 0 0.4525 0 0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.905</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <static>true</static> 
+    </model>  
+
+    <model name='METER_box2'>
+      <link name='link'>
+        <pose>1.2 0 0.4475 0 0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.895</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <static>true</static> 
+    </model>          
+    -->    
+
     
     <light name='Sun_light' type='point'>
       <pose>0 1 2 0 0 0</pose>
@@ -35,7 +66,7 @@
     <!-- import the Walls -->
     <include>
     	<uri>model://walls</uri>
-    	<pose>-2.0 0.0 0.0 0.0 0.0 1.57</pose>
+    	<pose>0 0.0 0.0 0.0 0.0 1.57</pose>
     	<scale>1 2 1</scale>
     	<static>true</static>  
     </include>
@@ -51,7 +82,7 @@
     <!-- import the Shelf -->
     <include>
     	<uri>model://shelf</uri>
-    	<pose>0.5 0.0 0.0 0.0 0.0 3.14</pose>
+    	<pose>0.6 0.0 0.0 0.0 0.0 3.14</pose>
     	<scale>1 1 1</scale>
     	<static>true</static>
     </include>
@@ -71,17 +102,199 @@
     	<scale>1 1 1</scale>
     	<static>true</static>
     </include>
-     
+
     <!-- import the Chocolate Bar A1-->
     <include>
     	<uri>model://chocolate_bar</uri>
     	<name>Chocolate_Bar_A1</name>
-    	<pose>0.44 0.30 1.07 0.0 0.0 1.57</pose>
+    	<pose>0.54 0.30 1.22 0.0 0.0 1.57</pose>
     	<scale>1 1 1</scale>
     	<self_collide>true</self_collide>
     	<velocity>0 0 0 0 -0 0</velocity>
-        <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
-        <wrench>0 0 -0.98 0 -0 0</wrench>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar A2-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A2</name>
+    	<pose>0.54 0.15 1.22 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar A3-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A3</name>
+    	<pose>0.54 0.0 1.22 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar A4-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A4</name>
+    	<pose>0.54 -0.15 1.22 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar A5-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A5</name>
+    	<pose>0.54 -0.30 1.22 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+     
+    <!-- import the Chocolate Bar B1-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B1</name>
+    	<pose>0.54 0.30 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar B2-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B2</name>
+    	<pose>0.54 0.15 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar B3-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B3</name>
+    	<pose>0.54 0.0 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar B4-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B4</name>
+    	<pose>0.54 -0.15 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+     <!-- import the Chocolate Bar B5-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B5</name>
+    	<pose>0.54 -0.30 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar C1-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_C1</name>
+    	<pose>0.54 0.30 0.92 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar C2-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_C2</name>
+    	<pose>0.54 0.15 0.92 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar C3-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_C3</name>
+    	<pose>0.54 0.0 0.92 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar C4-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_C4</name>
+    	<pose>0.54 -0.15 0.92 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+     <!-- import the Chocolate Bar C5-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_C5</name>
+    	<pose>0.54 -0.30 0.92 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
     	<!--static>true</static-->
     </include>
  

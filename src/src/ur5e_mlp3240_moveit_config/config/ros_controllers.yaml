@@ -44,10 +44,10 @@ mlp3240_gripper_controller:
     - top_to_finger1_joint
   gains:
     top_to_finger1_joint:
-      p: 200
-      d: 1
-      i: 0.5
-      i_clamp: 50
+      p: 5000
+      d: 30
+      i: 100
+      i_clamp: 400
 joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50      

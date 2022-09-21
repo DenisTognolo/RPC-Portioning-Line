@@ -15,12 +15,12 @@ int main(int argc, char** argv)
 
   geometry_msgs::Pose robot_pose;
   robot_pose.position.x = 0.0;
-  robot_pose.position.y = 0.05;
+  robot_pose.position.y = 0.0;
   robot_pose.position.z = 0.75;  
 
-  // environment definition (supposing all origin.z on the floor)
+  // environment definition (supposing all models have origin on the floor [z = 0])
   geometry_msgs::Pose shelf_origin;
-  shelf_origin.position.x = 0.5;
+  shelf_origin.position.x = 0.6;
   shelf_origin.position.y = 0.0;
   shelf_origin.position.z = 0.0;  
   
@@ -34,23 +34,25 @@ int main(int argc, char** argv)
   portioning_machine_origin.position.y = 0.2;
   portioning_machine_origin.position.z = 0.0;
 
-  double shelf_support_height = 0.75;
-  double vision_box_support_height = 0.95;
-  double portioning_machine_support_height = 0.85;
+  double shelf_support_height = 0.895;
+  double vision_box_support_height = 0.945;
+  double ring_light_support_height = 0.36;
+  double portioning_machine_support_height = 0.87;
 
   std::vector<double> shelf_size = {0.15, 0.75, 0.45, shelf_support_height};
-  std::vector<double> vision_box_size = {0.2, 0.2, 0.4, vision_box_support_height};
+  std::vector<double> vision_box_size = {0.3, 0.3, 0.48, vision_box_support_height};
+  std::vector<double> ring_light_size = {0.2, 0.2, 0.03, ring_light_support_height};
   std::vector<double> portioning_machine_size = {0.3, 0.3, 0.3, portioning_machine_support_height};
 
   std::vector<double> chocolate_bar_size = {0.14, 0.10, 0.01};
-  std::vector<int> inventory = {1, 0, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+  std::vector<int> inventory = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
   // Get actual Goals poses
   std::string chosen_chocolate_bar_pose_code;
   nh.getParam("code", chosen_chocolate_bar_pose_code); 
   //ROS_INFO("Got parameter : %s", chosen_chocolate_bar_pose_code.c_str());  
 
-  chocolate_portioner_env chocolate_portioner_env(robot_pose, shelf_origin, vision_box_origin, portioning_machine_origin, shelf_size, vision_box_size, portioning_machine_size, chocolate_bar_size, inventory);
+  chocolate_portioner_env chocolate_portioner_env(robot_pose, shelf_origin, vision_box_origin, portioning_machine_origin, shelf_size, vision_box_size, ring_light_size, portioning_machine_size, chocolate_bar_size, inventory);
 
   std::vector<double> shelf_desired_approach_RPY = {1.57, 0.0, 0.0};
   std::vector<double> vision_box_desired_approach_RPY = {-1.57, 3.14, 0.0};
@@ -66,7 +68,6 @@ int main(int argc, char** argv)
   std::vector<geometry_msgs::Pose> obstacle_poses;
 
   // Obstacle 1 - Table  
-  /*
   shape_msgs::SolidPrimitive table_primitive;
   table_primitive.type = table_primitive.BOX;
   table_primitive.dimensions.resize(3);
@@ -82,9 +83,8 @@ int main(int argc, char** argv)
   obstacle_names.push_back("Table");
   obstacle_primitives.push_back(table_primitive);
   obstacle_poses.push_back(table_pose);
-  */
+
   // Obstacle 2 - Shelf  
-  
   shape_msgs::SolidPrimitive shelf_primitive;
   shelf_primitive.type = shelf_primitive.BOX;
   shelf_primitive.dimensions.resize(3);
@@ -102,27 +102,54 @@ int main(int argc, char** argv)
   obstacle_primitives.push_back(shelf_primitive);
   obstacle_poses.push_back(shelf_pose);
 
-  /*
-  // Obstacle 3 - vision box
-
-  shape_msgs::SolidPrimitive vision_box_primitive;
-  vision_box_primitive.type = vision_box_primitive.CYLINDER;
-  vision_box_primitive.dimensions.resize(1);
-  vision_box_primitive.dimensions[0] = {vision_box_size[2], vision_box_size[0]/2};
+  // Obstacle 3 - vision box (two basement plus the ring light)
+  double vision_box_base_height = 0.05;
+  shape_msgs::SolidPrimitive vision_box_lower_primitive;
+  vision_box_lower_primitive.type = vision_box_lower_primitive.CYLINDER;
+  vision_box_lower_primitive.dimensions.resize(1);
+  vision_box_lower_primitive.dimensions = {vision_box_base_height, vision_box_size[0]/2};
   
-  geometry_msgs::Pose vision_box_pose = vision_box_origin;
-  vision_box_pose.position.x -= robot_pose.position.x;
-  vision_box_pose.position.y -= robot_pose.position.y;
-  vision_box_pose.position.z -= robot_pose.position.z;
-  vision_box_pose.position.z += (vision_box_size[2]/2 + vision_box_support_height);
+  geometry_msgs::Pose vision_box_lower_pose = vision_box_origin;
+  vision_box_lower_pose.position.x -= robot_pose.position.x;
+  vision_box_lower_pose.position.y -= robot_pose.position.y;
+  vision_box_lower_pose.position.z -= robot_pose.position.z;
+  vision_box_lower_pose.position.z += (vision_box_base_height/2 + vision_box_support_height);
 
-  obstacle_names.push_back("vision_box");
-  obstacle_primitives.push_back(vision_box_primitive);
-  obstacle_poses.push_back(vision_box_pose);  
-  */
+  obstacle_names.push_back("vision_box_lower_base");
+  obstacle_primitives.push_back(vision_box_lower_primitive);
+  obstacle_poses.push_back(vision_box_lower_pose);  
+
+  shape_msgs::SolidPrimitive vision_box_upper_primitive;
+  vision_box_upper_primitive.type = vision_box_upper_primitive.CYLINDER;
+  vision_box_upper_primitive.dimensions.resize(1);
+  vision_box_upper_primitive.dimensions = {vision_box_base_height, vision_box_size[0]/2};
+  
+  geometry_msgs::Pose vision_box_upper_pose = vision_box_origin;
+  vision_box_upper_pose.position.x -= robot_pose.position.x;
+  vision_box_upper_pose.position.y -= robot_pose.position.y;
+  vision_box_upper_pose.position.z -= robot_pose.position.z;
+  vision_box_upper_pose.position.z += (vision_box_size[2] + vision_box_support_height - vision_box_base_height/2);
+
+  obstacle_names.push_back("vision_box_upper_base");
+  obstacle_primitives.push_back(vision_box_upper_primitive);
+  obstacle_poses.push_back(vision_box_upper_pose);  
+
+  shape_msgs::SolidPrimitive ring_light_primitive;
+  ring_light_primitive.type = ring_light_primitive.CYLINDER;
+  ring_light_primitive.dimensions.resize(1);
+  ring_light_primitive.dimensions = {ring_light_size[2], ring_light_size[0]/2};
+  
+  geometry_msgs::Pose ring_light_pose = vision_box_origin;
+  ring_light_pose.position.x -= robot_pose.position.x;
+  ring_light_pose.position.y -= robot_pose.position.y;
+  ring_light_pose.position.z -= robot_pose.position.z;
+  ring_light_pose.position.z += (vision_box_support_height + ring_light_support_height + ring_light_size[2]/2);
+
+  obstacle_names.push_back("ring_light_base");
+  obstacle_primitives.push_back(ring_light_primitive);
+  obstacle_poses.push_back(ring_light_pose);
 
   // Obstacle 4 - portioning machine
-  
   shape_msgs::SolidPrimitive portioning_machine_primitive;
   portioning_machine_primitive.type = portioning_machine_primitive.BOX;
   portioning_machine_primitive.dimensions.resize(3);
@@ -141,7 +168,6 @@ int main(int argc, char** argv)
   obstacle_poses.push_back(portioning_machine_pose);  
 
   // Obstacle 5 - Walls
-  
   shape_msgs::SolidPrimitive wall_primitive;
   wall_primitive.type = wall_primitive.BOX;
   wall_primitive.dimensions.resize(3);
@@ -151,7 +177,7 @@ int main(int argc, char** argv)
 
   geometry_msgs::Pose back_wall_pose;
   back_wall_pose.position.x = 0.0 - robot_pose.position.x;
-  back_wall_pose.position.y = -0.5 - robot_pose.position.y;
+  back_wall_pose.position.y = -0.55 - robot_pose.position.y;
   back_wall_pose.position.z = 1.0 - robot_pose.position.z;
 
   obstacle_names.push_back("back_wall");
@@ -160,20 +186,30 @@ int main(int argc, char** argv)
 
   geometry_msgs::Pose front_wall_pose;
   front_wall_pose.position.x = 0.0 - robot_pose.position.x;
-  front_wall_pose.position.y = 0.5 - robot_pose.position.y;
+  front_wall_pose.position.y = 0.55 - robot_pose.position.y;
   front_wall_pose.position.z = 1.0 - robot_pose.position.z;
 
   obstacle_names.push_back("front_wall");
   obstacle_primitives.push_back(wall_primitive);
   obstacle_poses.push_back(front_wall_pose);
   
-
-  // Add environment info to the robot
+  // Add all environment info to the robot
   robot_ur5e.add_collision_objects(obstacle_names, obstacle_primitives, obstacle_poses);
 
-  double approach_offset = 0.05;
+
+  double empty_gripper_offset = 0.05;
+  double filled_gripper_offset = chocolate_bar_size[0]*3/4 + 0.01;
+  double approach_offset = empty_gripper_offset;
 
   spinner.start();
+
+    /*
+    // 0. TEST: Place the EE in front of the shelf
+    std::cout << "TEST..." << std::endl;
+    tmp_pose = chosen_chocolate_bar_pose;
+    tmp_pose.position.x = shelf_origin.position.x - shelf_size[0]/2;
+    robot_ur5e.go_to_pose(tmp_pose);
+    */
     
     // 1. Move to home position
     std::cout << "GOING TO HOME POSITION..." << std::endl;
@@ -196,8 +232,7 @@ int main(int argc, char** argv)
     // 5. Close the  gripper
     std::cout << "CLOSING THE GRIPPER..." << std::endl;
     robot_ur5e.move_gripper("close");
-    ros::Duration(3.0).sleep(); 
-    approach_offset += chocolate_bar_size[0]*3/4;
+    approach_offset = filled_gripper_offset;
 
     // 6. Place the EE out of the shelf
     std::cout << "EXITING THE SHELF..." << std::endl;
@@ -214,22 +249,20 @@ int main(int argc, char** argv)
     // 8. Move the EE inside of the vision box
     std::cout << "GOING INSIDE THE VISON BOX..." << std::endl;
     robot_ur5e.go_to_pose(vision_box_hole_pose);
-    /*
-    // 9. Rotate the EE inside of the vision box
+    
     std::cout << "WAITING 1 SEC..." << std::endl;
-    ros::Duration(1.0).sleep(); 
+    ros::Duration(1.0).sleep();
 
+    // 9. Rotate the EE inside of the vision box
     std::cout << "FLIPPING THE CHOCOLATE BAR..." << std::endl;
-    //tmp_pose = set_RPY(vision_box_hole_pose, {0.0 , 0.0, 1.57});
     robot_ur5e.actuate_one_joint(5, 3.14);
 
     std::cout << "WAITING 1 SEC..." << std::endl;
     ros::Duration(1.0).sleep(); 
 
     std::cout << "RE-FLIPPING THE CHOCOLATE BAR..." << std::endl;
-    //tmp_pose = set_RPY(vision_box_hole_pose, {0.0 , 0.0, 1.57});
     robot_ur5e.actuate_one_joint(5, -3.14);
-    */
+    
     // 10. Move the EE outside of the vision box
     std::cout << "EXITING THE VISION BOX..." << std::endl;
     tmp_pose = vision_box_hole_pose;
@@ -253,14 +286,14 @@ int main(int argc, char** argv)
     // 14. Move the EE out of the portioning machine
     std::cout << "BACK OFF FROM PORTIONING MACHINE..." << std::endl;
     tmp_pose = portioning_machine_hole_pose;
-    approach_offset -= chocolate_bar_size[0]*3/4;
+    approach_offset = empty_gripper_offset;
     tmp_pose.position.x += approach_offset;
     robot_ur5e.go_to_pose(tmp_pose);
 
     // 15. Move back to home position
     std::cout << "GOING BACK TO HOME POSITION..." << std::endl;
     robot_ur5e.go_to_config("home");
-
+  
   robot_ur5e.remove_collision_objects();
 
   ros::shutdown();

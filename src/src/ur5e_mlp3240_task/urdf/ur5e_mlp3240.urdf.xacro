@@ -31,7 +31,7 @@
 	<!-- Add a fake link for proper IK -->
 	<link name="ee_tool"/>
 	<joint name="ee_link_to_ee_tool" type="fixed">
-	      <origin xyz="0.01 0 0" rpy="0 0 0"/>
+	      <origin xyz="0.105 0 0" rpy="0 0 0"/>
 	      <parent link="ee_link"/>
 	      <child link="ee_tool"/>
 	</joint>
