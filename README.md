@@ -7,5 +7,5 @@ To proper import the 3D models you have to source the folder into the GAZEBO_MOD
 
 
 ```bash
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<your_path>/RPC-Portioning-Line/models
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<your_path>/RPC-Portioning-Line/models/dae
 ```
