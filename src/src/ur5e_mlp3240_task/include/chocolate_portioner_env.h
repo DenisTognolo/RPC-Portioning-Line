@@ -81,7 +81,7 @@ public:
     tmp_pose.position.z += chocolate_bar_size[2]/2;
     shelf_inventory_map[chosen_chocolate_bar_code]--;
 
-    tmp_pose.position.z += 0.01;  //basement height (but better be higher)
+    tmp_pose.position.z += 0.015;  //basement height (but better be higher)
     tmp_pose = set_RPY(tmp_pose, desired_RPY);
     return tmp_pose;
   }
@@ -102,7 +102,7 @@ public:
     tmp_pose.position.x += portioning_machine_size[0]/2; 
     tmp_pose.position.z += portioning_machine_size[2]/2;
     //Add the hole offset (the difference along z-axis between the center of the portioning machine and its hole)
-    tmp_pose.position.z += 0.08;
+    tmp_pose.position.z += 0.075;
     return tmp_pose;
   }
 

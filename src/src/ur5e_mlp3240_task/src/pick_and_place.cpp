@@ -34,13 +34,13 @@ int main(int argc, char** argv)
   portioning_machine_origin.position.y = 0.2;
   portioning_machine_origin.position.z = 0.0;
 
-  double shelf_support_height = 0.895;
-  double vision_box_support_height = 0.945;
-  double ring_light_support_height = 0.36;
-  double portioning_machine_support_height = 0.87;
+  double shelf_support_height = 0.90;
+  double vision_box_support_height = 0.75;
+  double ring_light_support_height = 0.86;
+  double portioning_machine_support_height = 0.85;
 
   std::vector<double> shelf_size = {0.15, 0.75, 0.45, shelf_support_height};
-  std::vector<double> vision_box_size = {0.3, 0.3, 0.48, vision_box_support_height};
+  std::vector<double> vision_box_size = {0.3, 0.3, 1.0, vision_box_support_height};
   std::vector<double> ring_light_size = {0.2, 0.2, 0.03, ring_light_support_height};
   std::vector<double> portioning_machine_size = {0.3, 0.3, 0.3, portioning_machine_support_height};
 
@@ -73,7 +73,7 @@ int main(int argc, char** argv)
   table_primitive.dimensions.resize(3);
   table_primitive.dimensions[0] = 0.75;
   table_primitive.dimensions[1] = 0.75;
-  table_primitive.dimensions[2] = 0.75;
+  table_primitive.dimensions[2] = 0.74;
 
   geometry_msgs::Pose table_pose;
   table_pose.position.x = 0.0 - robot_pose.position.x;
@@ -90,7 +90,7 @@ int main(int argc, char** argv)
   shelf_primitive.dimensions.resize(3);
   shelf_primitive.dimensions[0] = shelf_size[0];
   shelf_primitive.dimensions[1] = shelf_size[1];
-  shelf_primitive.dimensions[2] = shelf_size[2];
+  shelf_primitive.dimensions[2] = shelf_size[2]+0.1;
 
   geometry_msgs::Pose shelf_pose = shelf_origin;
   shelf_pose.position.x -= robot_pose.position.x;
@@ -203,13 +203,11 @@ int main(int argc, char** argv)
 
   spinner.start();
 
-    /*
     // 0. TEST: Place the EE in front of the shelf
     std::cout << "TEST..." << std::endl;
     tmp_pose = chosen_chocolate_bar_pose;
     tmp_pose.position.x = shelf_origin.position.x - shelf_size[0]/2;
     robot_ur5e.go_to_pose(tmp_pose);
-    */
     
     // 1. Move to home position
     std::cout << "GOING TO HOME POSITION..." << std::endl;
@@ -263,11 +261,15 @@ int main(int argc, char** argv)
     std::cout << "RE-FLIPPING THE CHOCOLATE BAR..." << std::endl;
     robot_ur5e.actuate_one_joint(5, -3.14);
     
+    /*
+
     // 10. Move the EE outside of the vision box
     std::cout << "EXITING THE VISION BOX..." << std::endl;
     tmp_pose = vision_box_hole_pose;
     tmp_pose.position.x += approach_offset;
     robot_ur5e.go_to_pose(tmp_pose);
+
+    */
 
     // 11. Move the EE in front of the portioning machine
     std::cout << "APPROACHING THE PORTIONING MACHINE..." << std::endl;
