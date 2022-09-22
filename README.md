@@ -45,4 +45,4 @@ In order to run the task and actually move the robot you have to type, on anothe
 ```bash
 rosrun ur5e_mlp3240_task pick_and_place _code:=XX
 ```
-Wher XX is the code of the desired chocolate bar (ex: A1, A1, ... ,A5, ... ,C5).
+Where XX is the code of the desired chocolate bar (ex: A1, A1, ... ,A5, ... ,C5).
