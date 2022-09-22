@@ -1,6 +1,8 @@
 # RPC-Portioning-Line
 
-### Download
+### Purpose of this packadge
+
+### Download this packadge
 You can simply download this packadge by the following command, typing it inside your bash.
 
 ```bash
