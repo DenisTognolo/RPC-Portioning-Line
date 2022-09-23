@@ -36,31 +36,44 @@ int main(int argc, char** argv)
 
   double shelf_support_height = 0.90;
   double vision_box_support_height = 0.75;
-  double ring_light_support_height = 0.86;
+  double ring_light_support_height = 0.85;
   double portioning_machine_support_height = 0.85;
+  double shelf_basement_weight = 0.01;
 
   std::vector<double> shelf_size = {0.15, 0.75, 0.45, shelf_support_height};
-  std::vector<double> vision_box_size = {0.3, 0.3, 1.0, vision_box_support_height};
+  std::vector<double> vision_box_size = {0.3, 0.3, 0.95, vision_box_support_height};
   std::vector<double> ring_light_size = {0.2, 0.2, 0.03, ring_light_support_height};
   std::vector<double> portioning_machine_size = {0.3, 0.3, 0.3, portioning_machine_support_height};
 
   std::vector<double> chocolate_bar_size = {0.14, 0.10, 0.01};
   std::vector<int> inventory = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+  
+  double shelf_to_chocolate_bar_origin_x_offset = 0.06;
+    
+  chocolate_portioner_env chocolate_portioner_env(robot_pose, shelf_origin, vision_box_origin, portioning_machine_origin, shelf_size, vision_box_size, ring_light_size, 
+                                                  portioning_machine_size, chocolate_bar_size, shelf_to_chocolate_bar_origin_x_offset, shelf_basement_weight, inventory);
 
-  // Get actual Goals poses
   std::string chosen_chocolate_bar_pose_code;
   nh.getParam("code", chosen_chocolate_bar_pose_code); 
-  //ROS_INFO("Got parameter : %s", chosen_chocolate_bar_pose_code.c_str());  
+  //ROS_INFO("Got parameter : %s", chosen_chocolate_bar_pose_code.c_str());
 
-  chocolate_portioner_env chocolate_portioner_env(robot_pose, shelf_origin, vision_box_origin, portioning_machine_origin, shelf_size, vision_box_size, ring_light_size, portioning_machine_size, chocolate_bar_size, inventory);
+  geometry_msgs::Pose chosen_chocolate_bar_origin = chocolate_portioner_env.compute_chosen_chocolate_bar_origin(chosen_chocolate_bar_pose_code);
 
+  // Define the orientation that the robot must assume when it goes to this positions
   std::vector<double> shelf_desired_approach_RPY = {1.57, 0.0, 0.0};
   std::vector<double> vision_box_desired_approach_RPY = {-1.57, 3.14, 0.0};
   std::vector<double> portioning_machine_desired_approach_RPY = {-1.57, 3.14, 0.0};
 
-  geometry_msgs::Pose chosen_chocolate_bar_pose = chocolate_portioner_env.compute_chosen_chocolate_bar_pose(chosen_chocolate_bar_pose_code, shelf_desired_approach_RPY);
+  geometry_msgs::Pose chosen_chocolate_bar_pose = chocolate_portioner_env.compute_chosen_chocolate_bar_pose(chosen_chocolate_bar_origin, shelf_desired_approach_RPY);
   geometry_msgs::Pose vision_box_hole_pose = chocolate_portioner_env.compute_vision_box_hole_pose(vision_box_desired_approach_RPY);
   geometry_msgs::Pose portioning_machine_hole_pose = chocolate_portioner_env.compute_portioning_machine_hole_pose(portioning_machine_desired_approach_RPY);
+
+  // Define approach offsets
+
+  double empty_gripper_offset = 0.05;
+  double filled_gripper_offset = chocolate_bar_size[0]*3/4 + 0.01;
+  double approach_offset = empty_gripper_offset;
+
 
   // Obstacle objects setup
   std::vector<std::string> obstacle_names;
@@ -175,49 +188,58 @@ int main(int argc, char** argv)
   wall_primitive.dimensions[1] = 0.05;
   wall_primitive.dimensions[2] = 1.0;
 
-  geometry_msgs::Pose back_wall_pose;
-  back_wall_pose.position.x = 0.0 - robot_pose.position.x;
-  back_wall_pose.position.y = -0.55 - robot_pose.position.y;
-  back_wall_pose.position.z = 1.0 - robot_pose.position.z;
+  geometry_msgs::Pose back_wall_origin;
+  back_wall_origin.position.x = 0.0 - robot_pose.position.x;
+  back_wall_origin.position.y = -0.55 - robot_pose.position.y;
+  back_wall_origin.position.z = 1.0 - robot_pose.position.z;
 
   obstacle_names.push_back("back_wall");
   obstacle_primitives.push_back(wall_primitive);
-  obstacle_poses.push_back(back_wall_pose);  
+  obstacle_poses.push_back(back_wall_origin);  
 
-  geometry_msgs::Pose front_wall_pose;
-  front_wall_pose.position.x = 0.0 - robot_pose.position.x;
-  front_wall_pose.position.y = 0.55 - robot_pose.position.y;
-  front_wall_pose.position.z = 1.0 - robot_pose.position.z;
+  geometry_msgs::Pose front_wall_origin;
+  front_wall_origin.position.x = 0.0 - robot_pose.position.x;
+  front_wall_origin.position.y = 0.55 - robot_pose.position.y;
+  front_wall_origin.position.z = 1.0 - robot_pose.position.z;
 
   obstacle_names.push_back("front_wall");
   obstacle_primitives.push_back(wall_primitive);
-  obstacle_poses.push_back(front_wall_pose);
+  obstacle_poses.push_back(front_wall_origin);
   
   // Add all environment info to the robot
   robot_ur5e.add_collision_objects(obstacle_names, obstacle_primitives, obstacle_poses);
 
+  // Moving Object - Chocolate Bar
 
-  double empty_gripper_offset = 0.05;
-  double filled_gripper_offset = chocolate_bar_size[0]*3/4 + 0.01;
-  double approach_offset = empty_gripper_offset;
+  shape_msgs::SolidPrimitive chocolate_bar_primitive;
+  chocolate_bar_primitive.type = chocolate_bar_primitive.BOX;
+  chocolate_bar_primitive.dimensions.resize(3);
+  chocolate_bar_primitive.dimensions[0] = chocolate_bar_size[0];
+  chocolate_bar_primitive.dimensions[1] = chocolate_bar_size[1];
+  chocolate_bar_primitive.dimensions[2] = chocolate_bar_size[2]/2; 
+
+  chosen_chocolate_bar_origin.position.x -= filled_gripper_offset - 0.01;
+  chosen_chocolate_bar_origin.position.z -= chocolate_bar_size[2] * 1/4;
+  
+  moveit_msgs::AttachedCollisionObject chocolate_bar_attached_collision_object;
+  chocolate_bar_attached_collision_object.link_name = "ee_tool";
+  chocolate_bar_attached_collision_object.object.id = "chocolate_bar";
+  chocolate_bar_attached_collision_object.object.primitives.push_back(chocolate_bar_primitive);
+  chocolate_bar_attached_collision_object.object.primitive_poses.push_back(chosen_chocolate_bar_origin);
 
   spinner.start();
 
-    // 0. TEST: Place the EE in front of the shelf
-    std::cout << "TEST..." << std::endl;
-    tmp_pose = chosen_chocolate_bar_pose;
-    tmp_pose.position.x = shelf_origin.position.x - shelf_size[0]/2;
-    robot_ur5e.go_to_pose(tmp_pose);
-    
     // 1. Move to home position
     std::cout << "GOING TO HOME POSITION..." << std::endl;
     robot_ur5e.go_to_config("home");
 
+    /*
     // 2. Place the EE in front of the chosen chocolate bar
     std::cout << "APPROACHING THE CHOCOLATE BAR..." << std::endl;
     tmp_pose = chosen_chocolate_bar_pose;
     tmp_pose.position.x -= approach_offset;
     robot_ur5e.go_to_pose(tmp_pose);
+    */
 
     // 3. Open the gripper
     std::cout << "OPENING THE GRIPPER..." << std::endl;
@@ -237,6 +259,9 @@ int main(int argc, char** argv)
     tmp_pose = chosen_chocolate_bar_pose;
     tmp_pose.position.x -= approach_offset;
     robot_ur5e.go_to_pose(tmp_pose);
+    robot_ur5e.add_attached_collision_object(chocolate_bar_attached_collision_object);
+
+    /*
 
     // 7. Move the EE in front of the vision box
     std::cout << "APPROACHING THE VISION BOX..." << std::endl;
@@ -261,7 +286,7 @@ int main(int argc, char** argv)
     std::cout << "RE-FLIPPING THE CHOCOLATE BAR..." << std::endl;
     robot_ur5e.actuate_one_joint(5, -3.14);
     
-    /*
+    */
 
     // 10. Move the EE outside of the vision box
     std::cout << "EXITING THE VISION BOX..." << std::endl;
@@ -269,13 +294,13 @@ int main(int argc, char** argv)
     tmp_pose.position.x += approach_offset;
     robot_ur5e.go_to_pose(tmp_pose);
 
-    */
-
     // 11. Move the EE in front of the portioning machine
     std::cout << "APPROACHING THE PORTIONING MACHINE..." << std::endl;
     tmp_pose = portioning_machine_hole_pose;
     tmp_pose.position.x += approach_offset;
     robot_ur5e.go_to_pose(tmp_pose);
+
+    robot_ur5e.remove_attached_collision_object(chocolate_bar_attached_collision_object);
 
     // 12. Entering the EE inside the portioning machine
     std::cout << "ENTERING THE PORTIONING MACHINE..." << std::endl;
@@ -284,7 +309,7 @@ int main(int argc, char** argv)
     // 13. Open the gripper
     std::cout << "OPENING THE GRIPPER..." << std::endl;
     robot_ur5e.move_gripper("open");
-
+    
     // 14. Move the EE out of the portioning machine
     std::cout << "BACK OFF FROM PORTIONING MACHINE..." << std::endl;
     tmp_pose = portioning_machine_hole_pose;

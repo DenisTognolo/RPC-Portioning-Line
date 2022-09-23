@@ -49,6 +49,23 @@ public:
     this->planning_scene_interface.removeCollisionObjects(obstacle_ids);
   }
 
+  void add_attached_collision_object(moveit_msgs::AttachedCollisionObject attached_collision_object){
+    // Add to the MoveIt environment a given attached collision object
+
+    std::cout << "Adding " << attached_collision_object.object.id << std::endl;
+    attached_collision_object.object.header.frame_id = this->move_group_interface_arm->getPlanningFrame(); 
+    this->planning_scene_interface.applyAttachedCollisionObject(attached_collision_object);
+  }
+
+  void remove_attached_collision_object(moveit_msgs::AttachedCollisionObject attached_collision_object){
+    // Remove from the MoveIt environment a given attached collision object, and his collision object
+
+    std::cout << "Removing " << attached_collision_object.object.id << std::endl;
+    attached_collision_object.object.operation = attached_collision_object.object.REMOVE;
+    this->planning_scene_interface.applyAttachedCollisionObject(attached_collision_object);
+    this->planning_scene_interface.removeCollisionObjects({attached_collision_object.object.id});
+  }
+
   geometry_msgs::PoseStamped get_current_pose(){
     // Return the pose of the End Effector (mean of the gripper finger origins) considering the actual robot configuration
 
@@ -89,7 +106,7 @@ public:
     move_group_interface_arm->move();                        
     move_group_interface_arm->stop();
 
-    print_current_current_pose("ee_tool");
+    //print_current_current_pose("ee_tool");
     return success;
   }
 
