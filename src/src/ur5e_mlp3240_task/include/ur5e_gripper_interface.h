@@ -22,6 +22,8 @@ public:
     move_group_interface_gripper = new moveit::planning_interface::MoveGroupInterface(gripper_group);
   };
 
+  // Collision set-up functions
+
   void add_collision_objects(std::vector<std::string> obstacle_names, std::vector<shape_msgs::SolidPrimitive> obstacle_primitives, std::vector<geometry_msgs::Pose> obstacle_poses){
     // Add to the MoveIt environment information about collision objects, given a list of obstacles (names, primitives and origins)
     
@@ -66,16 +68,18 @@ public:
     this->planning_scene_interface.removeCollisionObjects({attached_collision_object.object.id});
   }
 
-  geometry_msgs::PoseStamped get_current_pose(){
-    // Return the pose of the End Effector (mean of the gripper finger origins) considering the actual robot configuration
+  // Geometry functions
+  geometry_msgs::Pose set_position(std::vector<double> position){
+    // Return a pose setting a given position (leaving orientation equal to 0,0,0,0)
 
-    geometry_msgs::PoseStamped actual_pose;
-    geometry_msgs::PoseStamped actual_pose_l = move_group_interface_gripper->getCurrentPose("finger1");
-    geometry_msgs::PoseStamped actual_pose_r = move_group_interface_gripper->getCurrentPose("finger2");
-    actual_pose.pose.position.x = (actual_pose_l.pose.position.x + actual_pose_r.pose.position.x) /2;
-    actual_pose.pose.position.y = (actual_pose_l.pose.position.y + actual_pose_r.pose.position.y) /2;
-    actual_pose.pose.position.z = (actual_pose_l.pose.position.z + actual_pose_r.pose.position.z) /2;
-    return actual_pose;
+    if (position.size() != 3){
+      std::cerr << "Position must be a lenght 3 vector (x, y, z)" << std::endl;
+    }
+    geometry_msgs::Pose tmp_pose;
+    tmp_pose.position.x = position[0];
+    tmp_pose.position.y = position[1];
+    tmp_pose.position.z = position[2];
+    return tmp_pose;
   }
 
   void print_current_current_pose(std::string link){
@@ -105,8 +109,6 @@ public:
     ROS_INFO_NAMED("portionig_line", "Visualizing plan 1 (pose goal) %s", success ? "" : "FAILED [go_to_pose]");
     move_group_interface_arm->move();                        
     move_group_interface_arm->stop();
-
-    //print_current_current_pose("ee_tool");
     return success;
   }
 
@@ -151,4 +153,3 @@ public:
            delete move_group_interface_gripper;
        }
 };
-

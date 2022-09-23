@@ -13,26 +13,12 @@ int main(int argc, char** argv)
   ur5e_gripper_interface robot_ur5e("ur5e_arm", "mlp3240_gripper");
   geometry_msgs::Pose tmp_pose;
 
-  geometry_msgs::Pose robot_pose;
-  robot_pose.position.x = 0.0;
-  robot_pose.position.y = 0.0;
-  robot_pose.position.z = 0.75;  
+  geometry_msgs::Pose robot_pose = robot_ur5e.set_position({0.0, 0.0, 0.75});
 
   // environment definition (supposing all models have origin on the floor [z = 0])
-  geometry_msgs::Pose shelf_origin;
-  shelf_origin.position.x = 0.6;
-  shelf_origin.position.y = 0.0;
-  shelf_origin.position.z = 0.0;  
-  
-  geometry_msgs::Pose vision_box_origin;
-  vision_box_origin.position.x = -0.5;
-  vision_box_origin.position.y = -0.2;
-  vision_box_origin.position.z = 0.0;
-  
-  geometry_msgs::Pose portioning_machine_origin;
-  portioning_machine_origin.position.x = -0.55;
-  portioning_machine_origin.position.y = 0.2;
-  portioning_machine_origin.position.z = 0.0;
+  geometry_msgs::Pose shelf_origin  = robot_ur5e.set_position({0.6, 0.0, 0.0});
+  geometry_msgs::Pose vision_box_origin  = robot_ur5e.set_position({-0.5, -0.2, 0.0});
+  geometry_msgs::Pose portioning_machine_origin  = robot_ur5e.set_position({-0.55, 0.2, 0.0});
 
   double shelf_support_height = 0.90;
   double vision_box_support_height = 0.75;
@@ -69,11 +55,9 @@ int main(int argc, char** argv)
   geometry_msgs::Pose portioning_machine_hole_pose = chocolate_portioner_env.compute_portioning_machine_hole_pose(portioning_machine_desired_approach_RPY);
 
   // Define approach offsets
-
   double empty_gripper_offset = 0.05;
   double filled_gripper_offset = chocolate_bar_size[0]*3/4 + 0.01;
   double approach_offset = empty_gripper_offset;
-
 
   // Obstacle objects setup
   std::vector<std::string> obstacle_names;
@@ -206,11 +190,10 @@ int main(int argc, char** argv)
   obstacle_primitives.push_back(wall_primitive);
   obstacle_poses.push_back(front_wall_origin);
   
-  // Add all environment info to the robot
+  // Add all environment collision info to the robot
   robot_ur5e.add_collision_objects(obstacle_names, obstacle_primitives, obstacle_poses);
 
   // Moving Object - Chocolate Bar
-
   shape_msgs::SolidPrimitive chocolate_bar_primitive;
   chocolate_bar_primitive.type = chocolate_bar_primitive.BOX;
   chocolate_bar_primitive.dimensions.resize(3);
@@ -226,6 +209,8 @@ int main(int argc, char** argv)
   chocolate_bar_attached_collision_object.object.id = "chocolate_bar";
   chocolate_bar_attached_collision_object.object.primitives.push_back(chocolate_bar_primitive);
   chocolate_bar_attached_collision_object.object.primitive_poses.push_back(chosen_chocolate_bar_origin);
+
+  // Setup complete, let's start the task!
 
   spinner.start();
 
@@ -261,8 +246,6 @@ int main(int argc, char** argv)
     robot_ur5e.go_to_pose(tmp_pose);
     robot_ur5e.add_attached_collision_object(chocolate_bar_attached_collision_object);
 
-    /*
-
     // 7. Move the EE in front of the vision box
     std::cout << "APPROACHING THE VISION BOX..." << std::endl;
     tmp_pose = vision_box_hole_pose;
@@ -285,8 +268,6 @@ int main(int argc, char** argv)
 
     std::cout << "RE-FLIPPING THE CHOCOLATE BAR..." << std::endl;
     robot_ur5e.actuate_one_joint(5, -3.14);
-    
-    */
 
     // 10. Move the EE outside of the vision box
     std::cout << "EXITING THE VISION BOX..." << std::endl;
