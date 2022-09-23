@@ -15,29 +15,29 @@ int main(int argc, char** argv)
 
   geometry_msgs::Pose robot_pose = robot_ur5e.set_position({0.0, 0.0, 0.75});
 
-  // environment definition (supposing all models have origin on the floor [z = 0])
+  // environment definition (let's consider all models have origin on the floor [z = 0])
   geometry_msgs::Pose shelf_origin  = robot_ur5e.set_position({0.6, 0.0, 0.0});
   geometry_msgs::Pose vision_box_origin  = robot_ur5e.set_position({-0.5, -0.2, 0.0});
   geometry_msgs::Pose portioning_machine_origin  = robot_ur5e.set_position({-0.55, 0.2, 0.0});
 
   double shelf_support_height = 0.90;
+  double shelf_basement_height = 0.01;
+  double shelf_to_chocolate_bar_origin_x_offset = 0.06;
   double vision_box_support_height = 0.75;
-  double ring_light_support_height = 0.85;
+  double vision_box_to_ring_light_z_offset = 0.85;
   double portioning_machine_support_height = 0.85;
-  double shelf_basement_weight = 0.01;
+  
 
-  std::vector<double> shelf_size = {0.15, 0.75, 0.45, shelf_support_height};
-  std::vector<double> vision_box_size = {0.3, 0.3, 0.95, vision_box_support_height};
-  std::vector<double> ring_light_size = {0.2, 0.2, 0.03, ring_light_support_height};
+  std::vector<double> shelf_size = {0.15, 0.75, 0.45, shelf_support_height, shelf_basement_height, shelf_to_chocolate_bar_origin_x_offset};
+  std::vector<double> vision_box_size = {0.3, 0.3, 0.95, vision_box_support_height, vision_box_to_ring_light_z_offset};
+  std::vector<double> ring_light_size = {0.2, 0.2, 0.03};
   std::vector<double> portioning_machine_size = {0.3, 0.3, 0.3, portioning_machine_support_height};
 
   std::vector<double> chocolate_bar_size = {0.14, 0.10, 0.01};
   std::vector<int> inventory = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-  
-  double shelf_to_chocolate_bar_origin_x_offset = 0.06;
     
-  chocolate_portioner_env chocolate_portioner_env(robot_pose, shelf_origin, vision_box_origin, portioning_machine_origin, shelf_size, vision_box_size, ring_light_size, 
-                                                  portioning_machine_size, chocolate_bar_size, shelf_to_chocolate_bar_origin_x_offset, shelf_basement_weight, inventory);
+  chocolate_portioner_env chocolate_portioner_env(robot_pose, shelf_origin, vision_box_origin, portioning_machine_origin, shelf_size, vision_box_size, 
+                                                  portioning_machine_size, chocolate_bar_size, inventory);
 
   std::string chosen_chocolate_bar_pose_code;
   nh.getParam("code", chosen_chocolate_bar_pose_code); 
@@ -140,7 +140,7 @@ int main(int argc, char** argv)
   ring_light_pose.position.x -= robot_pose.position.x;
   ring_light_pose.position.y -= robot_pose.position.y;
   ring_light_pose.position.z -= robot_pose.position.z;
-  ring_light_pose.position.z += (vision_box_support_height + ring_light_support_height + ring_light_size[2]/2);
+  ring_light_pose.position.z += (vision_box_support_height + vision_box_to_ring_light_z_offset + ring_light_size[2]/2);
 
   obstacle_names.push_back("ring_light_base");
   obstacle_primitives.push_back(ring_light_primitive);

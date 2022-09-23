@@ -9,7 +9,6 @@ public:
 
   std::vector<double> shelf_size;
   std::vector<double> vision_box_size;
-  std::vector<double> ring_light_size;
   std::vector<double> portioning_machine_size;
   std::vector<double> chocolate_bar_size;
 
@@ -19,7 +18,7 @@ public:
 
   geometry_msgs::Pose robot_pose;
 
-  chocolate_portioner_env(geometry_msgs::Pose robot_pose, geometry_msgs::Pose shelf_origin, geometry_msgs::Pose vision_box_origin, geometry_msgs::Pose portioning_machine_origin, std::vector<double> shelf_size, std::vector<double> vision_box_size, std::vector<double> ring_light_size, std::vector<double> portioning_machine_size, std::vector<double> chocolate_bar_size, double shelf_to_chocolate_bar_origin_x_offset, double shelf_basement_height, std::vector<int> inventory)
+  chocolate_portioner_env(geometry_msgs::Pose robot_pose, geometry_msgs::Pose shelf_origin, geometry_msgs::Pose vision_box_origin, geometry_msgs::Pose portioning_machine_origin, std::vector<double> shelf_size, std::vector<double> vision_box_size, std::vector<double> portioning_machine_size, std::vector<double> chocolate_bar_size, std::vector<int> inventory)
   {
     this->robot_pose =  robot_pose;
     this->shelf_origin = shelf_origin;
@@ -28,15 +27,14 @@ public:
 
     this->shelf_size = shelf_size;
     this->vision_box_size = vision_box_size;
-    this->ring_light_size = ring_light_size;
     this->portioning_machine_size = portioning_machine_size;
     this->chocolate_bar_size = chocolate_bar_size;
 
     if(inventory.size() != 15){
       std::cout << "Error: this enviroment must specify 15 stocks!" << std::endl;
     }
-
     // set origin.position.z at the base of the object (over the support) and in robot reference frame
+
     this->shelf_origin.position.x -= this->robot_pose.position.x;
     this->shelf_origin.position.y -= this->robot_pose.position.y;
     this->shelf_origin.position.z = this->shelf_origin.position.z - this->robot_pose.position.z + this->shelf_size[3];
@@ -49,7 +47,7 @@ public:
     this->portioning_machine_origin.position.y -= this->robot_pose.position.y;
     this->portioning_machine_origin.position.z = this->portioning_machine_origin.position.z - this->robot_pose.position.z + this->portioning_machine_size[3];
 
-    this->build_chocolate_bars_map(shelf_to_chocolate_bar_origin_x_offset, shelf_basement_height, inventory);
+    this->build_chocolate_bars_map(shelf_size[5], shelf_size[4], inventory);
   };
 
   geometry_msgs::Pose set_RPY(geometry_msgs::Pose pose, std::vector<double> desired_RPY){
@@ -88,13 +86,12 @@ public:
     return chosen_chocolate_bar_origin;
   }
 
-
   geometry_msgs::Pose compute_vision_box_hole_pose(std::vector<double> desired_RPY){
     // Compute the pose that the robot must assume in order to place the chocolate bar correctly inside the vision box, given the desired orientation
 
     tmp_pose = set_RPY(vision_box_origin, desired_RPY);
     tmp_pose.position.x += chocolate_bar_size[0]*1/4;
-    tmp_pose.position.z += ring_light_size[3]/2;
+    tmp_pose.position.z += vision_box_size[4]/2;
     return tmp_pose;
   }
 
