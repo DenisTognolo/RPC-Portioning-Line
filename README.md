@@ -43,7 +43,7 @@ roslaunch ur5e_mlp3240_moveit_config portioning_line_rviz.launch
 Both of them launch the simulation in Gazebo, but the second one will also launch it in RVIZ, that can be used to try new planning approach or see collision objects during the task.
 
 ### Run the simulation
-In order to run the task and actually move the robot you have to type, on another terminal, the following commands:
+In order to run the task and actually move the robot you have to type, on another terminal, the following command:
 ```bash
 rosrun ur5e_mlp3240_task pick_and_place _code:=XX
 ```
