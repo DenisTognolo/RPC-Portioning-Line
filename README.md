@@ -3,7 +3,7 @@
 ### Purpose of this packadge
 The aim of this project is to simulate a typical industrial task for a robot manipulator in the ROS environment. In particular we implemented a pick and place task using a UR5e manipulator, with a mlp3240 gripper mounted on it.
 
-![alt text](docs/images/cases.png)
+![alt text](docs/images/Portioning_Line_both_view.png)
 
 
 ### Download this packadge
