@@ -3,9 +3,8 @@
 ### Purpose of this packadge
 The aim of this project is to simulate a typical industrial task for a robot manipulator in the ROS environment. In particular we implemented a pick and place task using a UR5e manipulator, with a mlp3240 gripper mounted on it.
 
-![alt text](docs/images/Portioning_Line_both_view.png)
 <p align="center">
-  <img width="460" height="300" src="docs/images/Portioning_Line_both_view.png">
+  <img src="docs/images/Portioning_Line_both_view.png">
 </p>
 
 
@@ -56,6 +55,6 @@ rosrun ur5e_mlp3240_task pick_and_place _code:=XX
 Where XX is the code of the desired chocolate bar (ex: A1, A1, ... ,A5, ... ,C5).
 
 ### TODO List:
-*Due to lack of information about geometry and mass of each mlp3240 links the inertias, you can find inside src/mlp3240/urdf/mlp3240.xacro, are not the real ones.
-*For simplicity we modeled the collision object of the shelf as a big box instead of a grid and so the chocolate bar collision object spawns only after the bar has got out from the shelf.
-*For simulation purpouse only one bar (the chosen one) will spawn its collision object.
+* Due to lack of information about geometry and mass of each mlp3240 links the inertias, you can find inside src/mlp3240/urdf/mlp3240.xacro, are not the real ones.
+* For simplicity we modeled the collision object of the shelf as a big box instead of a grid and so the chocolate bar collision object spawns only after the bar has got out from the shelf.
+* For simulation purpouse only one bar (the chosen one) will spawn its collision object.
