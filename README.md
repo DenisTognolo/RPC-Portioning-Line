@@ -7,7 +7,7 @@ The aim of this project is to simulate a typical industrial task for a robot man
   <img src="docs/images/Portioning_Line_both_view.png">
 </p>
 
-
+For all datails, see the report.pdf file inside the docs folder.
 
 ### Download this packadge
 You can simply download this packadge using the following command, typing it inside your bash.
