@@ -56,5 +56,4 @@ Where XX is the code of the desired chocolate bar (ex: A1, A1, ... ,A5, ... ,C5)
 
 ### TODO List:
 * Due to lack of information about geometry and mass of each mlp3240 links the inertias, you can find inside src/mlp3240/urdf/mlp3240.xacro, are not the real ones.
-* For simplicity we modeled the collision object of the shelf as a big box instead of a grid and so the chocolate bar collision object spawns only after the bar has got out from the shelf.
-* For simulation purpouse only one bar (the chosen one) will spawn its collision object.
+* For simplicity we modeled the collision object of the shelf as a big box instead of a grid, this created some trouble with the collision objects of the chocolate bars. So for simulation purpouse, the collision for the chocolate bar is attached immidiately after being taken from the shelf by the robot and detached immidiately before being inserted in the portioning machine.
