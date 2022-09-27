@@ -27,7 +27,6 @@ int main(int argc, char** argv)
   double vision_box_to_ring_light_z_offset = 0.85;
   double portioning_machine_support_height = 0.85;
   
-
   std::vector<double> shelf_size = {0.15, 0.75, 0.45, shelf_support_height, shelf_basement_height, shelf_to_chocolate_bar_origin_x_offset};
   std::vector<double> vision_box_size = {0.3, 0.3, 0.95, vision_box_support_height, vision_box_to_ring_light_z_offset};
   std::vector<double> ring_light_size = {0.2, 0.2, 0.03};
@@ -85,9 +84,9 @@ int main(int argc, char** argv)
   shape_msgs::SolidPrimitive shelf_primitive;
   shelf_primitive.type = shelf_primitive.BOX;
   shelf_primitive.dimensions.resize(3);
-  shelf_primitive.dimensions[0] = shelf_size[0];
+  shelf_primitive.dimensions[0] = shelf_size[0]+0.05;
   shelf_primitive.dimensions[1] = shelf_size[1];
-  shelf_primitive.dimensions[2] = shelf_size[2]+0.1;
+  shelf_primitive.dimensions[2] = shelf_size[2];
 
   geometry_msgs::Pose shelf_pose = shelf_origin;
   shelf_pose.position.x -= robot_pose.position.x;
