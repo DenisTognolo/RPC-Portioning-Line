@@ -5,7 +5,7 @@ The aim of this project is to simulate a typical industrial task for a robot man
 
 
 ### Download this packadge
-You can simply download this packadge by the following command, typing it inside your bash.
+You can simply download this packadge using the following command, typing it inside your bash.
 
 ```bash
 git clone https://github.com/DenisTognolo/RPC-Portioning-Line.git
@@ -32,7 +32,7 @@ If this command failed you probably need to create the executable files, so you 
 ```bash
 catkin_make
 ```
-This is also necessary in the case you modify some of the codes, to also update executable files. 
+This is also necessary in case you modify the code, in order to update the executable files. 
 
 ### Run the simulation
 In order to run the simulation you can use one of the following commands:
