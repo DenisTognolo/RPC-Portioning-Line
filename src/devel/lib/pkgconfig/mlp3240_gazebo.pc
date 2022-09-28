@@ -1,8 +1,0 @@
-prefix=/home/denis/catkin_ws6/src/devel
-
-Name: mlp3240_gazebo
-Description: Description of mlp3240_gazebo
-Version: 0.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp gazebo_ros control_toolbox xmlrpcpp
