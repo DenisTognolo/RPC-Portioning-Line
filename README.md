@@ -27,7 +27,7 @@ You can simply type it in your bash or paste it in your .bashrc file.
 ### Initial setup
 First thing to do in order to use this packadge is to move inside the correct folder, and you can use the he following command:
 ```bash
-cd RPC-Portioning-Line/src
+cd RPC-Portioning-Line/ws
 ```
 Then you also have to source the devel folder, in which you can find all executable files of this packadge, using the following command: 
 ```bash
