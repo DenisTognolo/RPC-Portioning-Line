@@ -55,4 +55,4 @@ rosrun ur5e_mlp3240_task pick_and_place _code:=XX
 Where XX is the code of the desired chocolate bar (ex: A1, A1, ... ,A5, ... ,C5).
 
 ### TODO List:
-* Due to lack of information about geometry and mass of each mlp3240 links the inertias, you can find inside src/mlp3240/urdf/mlp3240.xacro, are not the real ones.
+* Due to lack of information about geometry and mass of each mlp3240 links, the inertias, that you can find inside src/mlp3240/urdf/mlp3240.xacro, are not the real ones.
