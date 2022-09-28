@@ -43,25 +43,25 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Utility rule file for ur5e_mlp3240_task_generate_messages_eus.
 
 # Include the progress variables for this target.
 include ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/progress.make
 
-ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus: /home/denis/catkin_ws6/src/devel/share/roseus/ros/ur5e_mlp3240_task/manifest.l
+ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus: /home/denis/catkin_ws6/ws/devel/share/roseus/ros/ur5e_mlp3240_task/manifest.l
 
 
-/home/denis/catkin_ws6/src/devel/share/roseus/ros/ur5e_mlp3240_task/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/denis/catkin_ws6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for ur5e_mlp3240_task"
-	cd /home/denis/catkin_ws6/src/build/ur5e_mlp3240_task && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/denis/catkin_ws6/src/devel/share/roseus/ros/ur5e_mlp3240_task ur5e_mlp3240_task actionlib_msgs std_msgs trajectory_msgs control_msgs
+/home/denis/catkin_ws6/ws/devel/share/roseus/ros/ur5e_mlp3240_task/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/denis/catkin_ws6/ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for ur5e_mlp3240_task"
+	cd /home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/denis/catkin_ws6/ws/devel/share/roseus/ros/ur5e_mlp3240_task ur5e_mlp3240_task actionlib_msgs std_msgs trajectory_msgs control_msgs
 
 ur5e_mlp3240_task_generate_messages_eus: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus
-ur5e_mlp3240_task_generate_messages_eus: /home/denis/catkin_ws6/src/devel/share/roseus/ros/ur5e_mlp3240_task/manifest.l
+ur5e_mlp3240_task_generate_messages_eus: /home/denis/catkin_ws6/ws/devel/share/roseus/ros/ur5e_mlp3240_task/manifest.l
 ur5e_mlp3240_task_generate_messages_eus: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/build.make
 
 .PHONY : ur5e_mlp3240_task_generate_messages_eus
@@ -72,10 +72,10 @@ ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/build: 
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/build
 
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/ur5e_mlp3240_task && $(CMAKE_COMMAND) -P CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task && $(CMAKE_COMMAND) -P CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/clean
 
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/ur5e_mlp3240_task /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/ur5e_mlp3240_task /home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task /home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/depend
 

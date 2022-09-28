@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/denis/catkin_ws6/src/src/ur5e_mlp3240_task/src/pick_and_place.cpp" "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.o"
+  "/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task/src/pick_and_place.cpp" "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,7 +23,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/denis/catkin_ws6/src/src/ur5e_mlp3240_task/include"
+  "/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

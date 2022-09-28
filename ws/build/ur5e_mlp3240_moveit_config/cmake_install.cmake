@@ -1,8 +1,8 @@
-# Install script for directory: /home/denis/catkin_ws6/src/src/ur5e_mlp3240_moveit_config
+# Install script for directory: /home/denis/catkin_ws6/ws/src/ur5e_mlp3240_moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/denis/catkin_ws6/src/install")
+  set(CMAKE_INSTALL_PREFIX "/home/denis/catkin_ws6/ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_moveit_config/catkin_generated/installspace/ur5e_mlp3240_moveit_config.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_moveit_config/catkin_generated/installspace/ur5e_mlp3240_moveit_config.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_moveit_config/cmake" TYPE FILE FILES
-    "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_moveit_config/catkin_generated/installspace/ur5e_mlp3240_moveit_configConfig.cmake"
-    "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_moveit_config/catkin_generated/installspace/ur5e_mlp3240_moveit_configConfig-version.cmake"
+    "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_moveit_config/catkin_generated/installspace/ur5e_mlp3240_moveit_configConfig.cmake"
+    "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_moveit_config/catkin_generated/installspace/ur5e_mlp3240_moveit_configConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_moveit_config" TYPE FILE FILES "/home/denis/catkin_ws6/src/src/ur5e_mlp3240_moveit_config/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_moveit_config" TYPE FILE FILES "/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_moveit_config/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_moveit_config" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/src/src/ur5e_mlp3240_moveit_config/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_moveit_config" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_moveit_config/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_moveit_config" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/src/src/ur5e_mlp3240_moveit_config/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_moveit_config" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_moveit_config/config")
 endif()
 

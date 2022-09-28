@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Utility rule file for _run_tests_ur_bringup_roslaunch-check.
 
@@ -63,10 +63,10 @@ universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/
 .PHONY : universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/build
 
 universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_bringup && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_bringup && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/clean
 
 universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/universal_robot/ur_bringup /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/universal_robot/ur_bringup /home/denis/catkin_ws6/src/build/universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/universal_robot/ur_bringup /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/universal_robot/ur_bringup /home/denis/catkin_ws6/ws/build/universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_bringup/CMakeFiles/_run_tests_ur_bringup_roslaunch-check.dir/depend
 

@@ -1,8 +1,8 @@
-prefix=/home/denis/catkin_ws6/src/devel
+prefix=/home/denis/catkin_ws6/ws/devel
 
 Name: ur_driver
 Description: Description of ur_driver
 Version: 1.2.7
-Cflags: -I/home/denis/catkin_ws6/src/devel/include
+Cflags: -I/home/denis/catkin_ws6/ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: dynamic_reconfigure

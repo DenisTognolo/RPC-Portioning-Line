@@ -160,7 +160,8 @@ public:
   void compute_obstacle_primitives(){
     // Compute all the geometry primitives for the collision objects, starting from class parameters
 
-    // Obstacle 1 - Table  
+    // Obstacle 1 - Table 
+
     table_primitive.type = table_primitive.BOX;
     table_primitive.dimensions.resize(3);
     table_primitive.dimensions[0] = 0.75;
@@ -170,193 +171,99 @@ public:
     obstacle_primitives.push_back(table_primitive);
 
     // Obstacle 2 - Shelf  
-    //1
-    shape_msgs::SolidPrimitive shelf_primitive_1;
-    shelf_primitive_1.type = shelf_primitive_1.BOX;
-    shelf_primitive_1.dimensions.resize(3);
-    shelf_primitive_1.dimensions[0] = shelf_size[0];
-    shelf_primitive_1.dimensions[1] = 0.015;
-    shelf_primitive_1.dimensions[2] = shelf_size[2];
+    shape_msgs::SolidPrimitive shelf_primitive_fat;
+    shape_msgs::SolidPrimitive shelf_primitive_thin;
+    shelf_primitive_fat.type = shelf_primitive_fat.BOX;
+    shelf_primitive_fat.dimensions.resize(3);
+    // Vertical
+    shelf_primitive_fat.dimensions[0] = shelf_size[0];
+    shelf_primitive_fat.dimensions[1] = 0.030;
+    shelf_primitive_fat.dimensions[2] = shelf_size[2];
 
-    obstacle_primitives.push_back(shelf_primitive_1);
+    shelf_primitive_thin = shelf_primitive_fat;
+    shelf_primitive_thin.dimensions[1] /= 2;
 
+    //1 
+    obstacle_primitives.push_back(shelf_primitive_thin);
     //2
-    shape_msgs::SolidPrimitive shelf_primitive_2;
-    shelf_primitive_2.type = shelf_primitive_2.BOX;
-    shelf_primitive_2.dimensions.resize(3);
-    shelf_primitive_2.dimensions[0] = shelf_size[0];
-    shelf_primitive_2.dimensions[1] = 0.030;
-    shelf_primitive_2.dimensions[2] = shelf_size[2];
-
-    obstacle_primitives.push_back(shelf_primitive_2);
-
+    obstacle_primitives.push_back(shelf_primitive_fat);
     //3
-    shape_msgs::SolidPrimitive shelf_primitive_3;
-    shelf_primitive_3.type = shelf_primitive_3.BOX;
-    shelf_primitive_3.dimensions.resize(3);
-    shelf_primitive_3.dimensions[0] = shelf_size[0];
-    shelf_primitive_3.dimensions[1] = 0.030;
-    shelf_primitive_3.dimensions[2] = shelf_size[2];
-
-    obstacle_primitives.push_back(shelf_primitive_3);
-
+    obstacle_primitives.push_back(shelf_primitive_fat);
     //4
-    shape_msgs::SolidPrimitive shelf_primitive_4;
-    shelf_primitive_4.type = shelf_primitive_4.BOX;
-    shelf_primitive_4.dimensions.resize(3);
-    shelf_primitive_4.dimensions[0] = shelf_size[0];
-    shelf_primitive_4.dimensions[1] = 0.030;
-    shelf_primitive_4.dimensions[2] = shelf_size[2];
-
-    obstacle_primitives.push_back(shelf_primitive_4);
-
+    obstacle_primitives.push_back(shelf_primitive_thin);
     //5
-    shape_msgs::SolidPrimitive shelf_primitive_5;
-    shelf_primitive_5.type = shelf_primitive_5.BOX;
-    shelf_primitive_5.dimensions.resize(3);
-    shelf_primitive_5.dimensions[0] = shelf_size[0];
-    shelf_primitive_5.dimensions[1] = 0.030;
-    shelf_primitive_5.dimensions[2] = shelf_size[2];
-
-    obstacle_primitives.push_back(shelf_primitive_5);
-
+    obstacle_primitives.push_back(shelf_primitive_fat);
     //6
-    shape_msgs::SolidPrimitive shelf_primitive_6;
-    shelf_primitive_6.type = shelf_primitive_6.BOX;
-    shelf_primitive_6.dimensions.resize(3);
-    shelf_primitive_6.dimensions[0] = shelf_size[0];
-    shelf_primitive_6.dimensions[1] = 0.015;
-    shelf_primitive_6.dimensions[2] = shelf_size[2];
+    obstacle_primitives.push_back(shelf_primitive_fat);
 
-    obstacle_primitives.push_back(shelf_primitive_6);
+    // Horizontal 
+    shelf_primitive_fat.dimensions[0] = shelf_size[0];
+    shelf_primitive_fat.dimensions[1] = shelf_size[1];
+    shelf_primitive_fat.dimensions[2] = 0.030;
+
+    shelf_primitive_thin = shelf_primitive_fat;
+    shelf_primitive_thin.dimensions[2] /= 2; 
 
     //7
-    shape_msgs::SolidPrimitive shelf_primitive_7;
-    shelf_primitive_7.type = shelf_primitive_7.BOX;
-    shelf_primitive_7.dimensions.resize(3);
-    shelf_primitive_7.dimensions[0] = shelf_size[0];
-    shelf_primitive_7.dimensions[1] = shelf_size[1];
-    shelf_primitive_7.dimensions[2] = 0.015;
-
-    obstacle_primitives.push_back(shelf_primitive_7);
-
+    obstacle_primitives.push_back(shelf_primitive_thin);
     //8
-    shape_msgs::SolidPrimitive shelf_primitive_8;
-    shelf_primitive_8.type = shelf_primitive_8.BOX;
-    shelf_primitive_8.dimensions.resize(3);
-    shelf_primitive_8.dimensions[0] = shelf_size[0];
-    shelf_primitive_8.dimensions[1] = shelf_size[1];
-    shelf_primitive_8.dimensions[2] = 0.030;
-
-    obstacle_primitives.push_back(shelf_primitive_8);
-
+    obstacle_primitives.push_back(shelf_primitive_fat);
     //9
-    shape_msgs::SolidPrimitive shelf_primitive_9;
-    shelf_primitive_9.type = shelf_primitive_9.BOX;
-    shelf_primitive_9.dimensions.resize(3);
-    shelf_primitive_9.dimensions[0] = shelf_size[0];
-    shelf_primitive_9.dimensions[1] = shelf_size[1];
-    shelf_primitive_9.dimensions[2] = 0.030;
-
-    obstacle_primitives.push_back(shelf_primitive_9);
-
+    obstacle_primitives.push_back(shelf_primitive_fat);
     //10
-    shape_msgs::SolidPrimitive shelf_primitive_10;
-    shelf_primitive_10.type = shelf_primitive_10.BOX;
-    shelf_primitive_10.dimensions.resize(3);
-    shelf_primitive_10.dimensions[0] = shelf_size[0];
-    shelf_primitive_10.dimensions[1] = shelf_size[1];
-    shelf_primitive_10.dimensions[2] = 0.015;
-
-    obstacle_primitives.push_back(shelf_primitive_10);
+    obstacle_primitives.push_back(shelf_primitive_thin);
 
     // Obstacle 3 - vision box (two basement plus the ring light)
-    shape_msgs::SolidPrimitive vision_box_lower_primitive;
-    vision_box_lower_primitive.type = vision_box_lower_primitive.CYLINDER;
-    vision_box_lower_primitive.dimensions.resize(1);
-    vision_box_lower_primitive.dimensions = {vision_box_base_height, vision_box_size[0]/2};
+    //upper vision box cylinder
+    shape_msgs::SolidPrimitive vision_box_primitive;
+    vision_box_primitive.type = vision_box_primitive.CYLINDER;
+    vision_box_primitive.dimensions.resize(1);
+    vision_box_primitive.dimensions = {vision_box_base_height, vision_box_size[0]/2};
 
-    obstacle_primitives.push_back(vision_box_lower_primitive);
+    obstacle_primitives.push_back(vision_box_primitive);
 
-    shape_msgs::SolidPrimitive vision_box_upper_primitive;
-    vision_box_upper_primitive.type = vision_box_upper_primitive.CYLINDER;
-    vision_box_upper_primitive.dimensions.resize(1);
-    vision_box_upper_primitive.dimensions = {vision_box_base_height, vision_box_size[0]/2};
-
-    obstacle_primitives.push_back(vision_box_upper_primitive);
+    //lower vision box cylinder
+    obstacle_primitives.push_back(vision_box_primitive);
 
     //left rod
-    shape_msgs::SolidPrimitive vision_box_left_rod_primitive;
-    vision_box_left_rod_primitive.type = vision_box_left_rod_primitive.CYLINDER;
-    vision_box_left_rod_primitive.dimensions.resize(1);
-    vision_box_left_rod_primitive.dimensions = {vision_box_rod_height, 0.008};
-
-    obstacle_primitives.push_back(vision_box_left_rod_primitive);
+    vision_box_primitive.dimensions = {vision_box_rod_height, 0.008};
+    obstacle_primitives.push_back(vision_box_primitive);
 
     //right rod
-    shape_msgs::SolidPrimitive vision_box_right_rod_primitive;
-    vision_box_right_rod_primitive.type = vision_box_right_rod_primitive.CYLINDER;
-    vision_box_right_rod_primitive.dimensions.resize(1);
-    vision_box_right_rod_primitive.dimensions = {vision_box_rod_height, 0.008};
-
-    obstacle_primitives.push_back(vision_box_right_rod_primitive);
+    vision_box_primitive.dimensions = {vision_box_rod_height, 0.008};
+    obstacle_primitives.push_back(vision_box_primitive);
 
     //back rod
-    shape_msgs::SolidPrimitive vision_box_back_rod_primitive;
-    vision_box_back_rod_primitive.type = vision_box_back_rod_primitive.CYLINDER;
-    vision_box_back_rod_primitive.dimensions.resize(1);
-    vision_box_back_rod_primitive.dimensions = {vision_box_rod_height, 0.008};
-
-    obstacle_primitives.push_back(vision_box_back_rod_primitive); 
+    obstacle_primitives.push_back(vision_box_primitive); 
 
     //ring light
-    shape_msgs::SolidPrimitive ring_light_primitive;
-    ring_light_primitive.type = ring_light_primitive.CYLINDER;
-    ring_light_primitive.dimensions.resize(1);
-    ring_light_primitive.dimensions = {ring_light_size[2], ring_light_size[0]/2};
-
-    obstacle_primitives.push_back(ring_light_primitive);
+    vision_box_primitive.dimensions = {ring_light_size[2], ring_light_size[0]/2};
+    obstacle_primitives.push_back(vision_box_primitive);
 
     // Obstacle 4 - portioning machine
     //upper box
-    shape_msgs::SolidPrimitive upper_portioning_machine_primitive;
-    upper_portioning_machine_primitive.type = upper_portioning_machine_primitive.BOX;
-    upper_portioning_machine_primitive.dimensions.resize(3);
-    upper_portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
-    upper_portioning_machine_primitive.dimensions[1] = portioning_machine_size[1];
-    upper_portioning_machine_primitive.dimensions[2] = 0.025;
+    shape_msgs::SolidPrimitive portioning_machine_primitive;
+    portioning_machine_primitive.type = portioning_machine_primitive.BOX;
+    portioning_machine_primitive.dimensions.resize(3);
+    portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
+    portioning_machine_primitive.dimensions[1] = portioning_machine_size[1];
+    portioning_machine_primitive.dimensions[2] = 0.025;
 
-    obstacle_primitives.push_back(upper_portioning_machine_primitive);
+    obstacle_primitives.push_back(portioning_machine_primitive);
 
     //lower box
-    shape_msgs::SolidPrimitive lower_portioning_machine_primitive;
-    lower_portioning_machine_primitive.type = lower_portioning_machine_primitive.BOX;
-    lower_portioning_machine_primitive.dimensions.resize(3);
-    lower_portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
-    lower_portioning_machine_primitive.dimensions[1] = portioning_machine_size[1];
-    lower_portioning_machine_primitive.dimensions[2] = 0.2;
-
-    obstacle_primitives.push_back(lower_portioning_machine_primitive); 
+    portioning_machine_primitive.dimensions[2] = 0.2;
+    obstacle_primitives.push_back(portioning_machine_primitive); 
 
     //left box
-    shape_msgs::SolidPrimitive left_portioning_machine_primitive;
-    left_portioning_machine_primitive.type = left_portioning_machine_primitive.BOX;
-    left_portioning_machine_primitive.dimensions.resize(3);
-    left_portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
-    left_portioning_machine_primitive.dimensions[1] = 0.075;
-    left_portioning_machine_primitive.dimensions[2] = 0.065;
+    portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
+    portioning_machine_primitive.dimensions[1] = 0.075;
+    portioning_machine_primitive.dimensions[2] = 0.065;
 
-    obstacle_primitives.push_back(left_portioning_machine_primitive);
+    obstacle_primitives.push_back(portioning_machine_primitive);
 
     //right box
-    shape_msgs::SolidPrimitive right_portioning_machine_primitive;
-    right_portioning_machine_primitive.type = right_portioning_machine_primitive.BOX;
-    right_portioning_machine_primitive.dimensions.resize(3);
-    right_portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
-    right_portioning_machine_primitive.dimensions[1] = 0.075;
-    right_portioning_machine_primitive.dimensions[2] = 0.065;
-
-    obstacle_primitives.push_back(right_portioning_machine_primitive);
+    obstacle_primitives.push_back(portioning_machine_primitive);
 
     // Obstacle 5 - Walls
     shape_msgs::SolidPrimitive wall_primitive;
@@ -366,7 +273,9 @@ public:
     wall_primitive.dimensions[1] = 0.05;
     wall_primitive.dimensions[2] = 1.0;
 
+    //back wall
     obstacle_primitives.push_back(wall_primitive);
+    //front wall
     obstacle_primitives.push_back(wall_primitive);
 
     // Moving Object - Chocolate Bar
@@ -394,95 +303,43 @@ public:
     obstacle_poses.push_back(table_pose);
 
     // Obstacle 1 - Shelf 
-    //1
-    geometry_msgs::Pose shelf_pose_1 = shelf_origin;
-    shelf_pose_1.position.x -= robot_pose.position.x;
-    shelf_pose_1.position.y -= robot_pose.position.y - 0.375;
-    shelf_pose_1.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_1.position.z += (shelf_size[2]/2 + shelf_support_height);
-
-    obstacle_poses.push_back(shelf_pose_1);
-
+    geometry_msgs::Pose tmp_shelf_pose = shelf_origin;
+    //1 Vertical from Left
+    tmp_shelf_pose.position.y += shelf_size[1]/2;
+    tmp_shelf_pose.position.z += shelf_size[2]/2;
+    obstacle_poses.push_back(tmp_shelf_pose);
     //2
-    geometry_msgs::Pose shelf_pose_2 = shelf_origin;
-    shelf_pose_2.position.x -= robot_pose.position.x;
-    shelf_pose_2.position.y -= robot_pose.position.y - 0.225;
-    shelf_pose_2.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_2.position.z += (shelf_size[2]/2 + shelf_support_height);
-
-    obstacle_poses.push_back(shelf_pose_2);
-
+    tmp_shelf_pose.position.y -= 0.15;
+    obstacle_poses.push_back(tmp_shelf_pose);
     //3
-    geometry_msgs::Pose shelf_pose_3 = shelf_origin;
-    shelf_pose_3.position.x -= robot_pose.position.x;
-    shelf_pose_3.position.y -= robot_pose.position.y - 0.075;
-    shelf_pose_3.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_3.position.z += (shelf_size[2]/2 + shelf_support_height);
+    tmp_shelf_pose.position.y -= 0.15;
+    obstacle_poses.push_back(tmp_shelf_pose);
 
-    obstacle_poses.push_back(shelf_pose_3);
 
-    //4
-    geometry_msgs::Pose shelf_pose_4 = shelf_origin;
-    shelf_pose_4.position.x -= robot_pose.position.x;
-    shelf_pose_4.position.y -= robot_pose.position.y + 0.075;
-    shelf_pose_4.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_4.position.z += (shelf_size[2]/2 + shelf_support_height);
-
-    obstacle_poses.push_back(shelf_pose_4);
-
+    //4 Vertical from Right
+    tmp_shelf_pose = shelf_origin;
+    tmp_shelf_pose.position.y -= shelf_size[1]/2;
+    tmp_shelf_pose.position.z += shelf_size[2]/2;
+    obstacle_poses.push_back(tmp_shelf_pose);
     //5
-    geometry_msgs::Pose shelf_pose_5 = shelf_origin;
-    shelf_pose_5.position.x -= robot_pose.position.x;
-    shelf_pose_5.position.y -= robot_pose.position.y + 0.225;
-    shelf_pose_5.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_5.position.z += (shelf_size[2]/2 + shelf_support_height);
-
-    obstacle_poses.push_back(shelf_pose_5);
-
+    tmp_shelf_pose.position.y += 0.15;
+    obstacle_poses.push_back(tmp_shelf_pose);
     //6
-    geometry_msgs::Pose shelf_pose_6 = shelf_origin;
-    shelf_pose_6.position.x -= robot_pose.position.x;
-    shelf_pose_6.position.y -= robot_pose.position.y + 0.375;
-    shelf_pose_6.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_6.position.z += (shelf_size[2]/2 + shelf_support_height);
+    tmp_shelf_pose.position.y += 0.15;
+    obstacle_poses.push_back(tmp_shelf_pose);
 
-    obstacle_poses.push_back(shelf_pose_6);
-
-    //7
-    geometry_msgs::Pose shelf_pose_7 = shelf_origin;
-    shelf_pose_7.position.x -= robot_pose.position.x;
-    shelf_pose_7.position.y -= robot_pose.position.y;
-    shelf_pose_7.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_7.position.z += (shelf_size[2] + shelf_support_height);
-
-    obstacle_poses.push_back(shelf_pose_7);
-
+    //7 Horizontal from bottom
+    tmp_shelf_pose = shelf_origin;
+    obstacle_poses.push_back(tmp_shelf_pose);
     //8
-    geometry_msgs::Pose shelf_pose_8 = shelf_origin;
-    shelf_pose_8.position.x -= robot_pose.position.x;
-    shelf_pose_8.position.y -= robot_pose.position.y;
-    shelf_pose_8.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_8.position.z += (shelf_size[2] + shelf_support_height - 0.15);
-
-    obstacle_poses.push_back(shelf_pose_8);
-
+    tmp_shelf_pose.position.z += 0.15;
+    obstacle_poses.push_back(tmp_shelf_pose);
     //9
-    geometry_msgs::Pose shelf_pose_9 = shelf_origin;
-    shelf_pose_9.position.x -= robot_pose.position.x;
-    shelf_pose_9.position.y -= robot_pose.position.y;
-    shelf_pose_9.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_9.position.z += (shelf_size[2] + shelf_support_height - 0.30);
-
-    obstacle_poses.push_back(shelf_pose_9);
-
+    tmp_shelf_pose.position.z += 0.15;
+    obstacle_poses.push_back(tmp_shelf_pose);
     //10
-    geometry_msgs::Pose shelf_pose_10 = shelf_origin;
-    shelf_pose_10.position.x -= robot_pose.position.x;
-    shelf_pose_10.position.y -= robot_pose.position.y;
-    shelf_pose_10.position.z -= robot_pose.position.z + 0.02;
-    shelf_pose_10.position.z += (shelf_size[2] + shelf_support_height - 0.45);
-
-    obstacle_poses.push_back(shelf_pose_10);
+    tmp_shelf_pose.position.z += 0.15;
+    obstacle_poses.push_back(tmp_shelf_pose);
 
     // Obstacle 3 - vision box (two basement plus the ring light)
     geometry_msgs::Pose vision_box_lower_pose = vision_box_origin;

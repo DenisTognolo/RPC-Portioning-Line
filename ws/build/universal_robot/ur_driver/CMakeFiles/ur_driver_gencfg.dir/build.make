@@ -43,44 +43,44 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Utility rule file for ur_driver_gencfg.
 
 # Include the progress variables for this target.
 include universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/progress.make
 
-universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg: /home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h
-universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg: /home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py
+universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg: /home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h
+universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg: /home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py
 
 
-/home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h: /home/denis/catkin_ws6/src/src/universal_robot/ur_driver/cfg/URDriver.cfg
-/home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h: /opt/ros/noetic/share/dynamic_reconfigure/templates/ConfigType.py.template
-/home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h: /opt/ros/noetic/share/dynamic_reconfigure/templates/ConfigType.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/denis/catkin_ws6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating dynamic reconfigure files from cfg/URDriver.cfg: /home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h /home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py"
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_driver && ../../catkin_generated/env_cached.sh /home/denis/catkin_ws6/src/build/universal_robot/ur_driver/setup_custom_pythonpath.sh /home/denis/catkin_ws6/src/src/universal_robot/ur_driver/cfg/URDriver.cfg /opt/ros/noetic/share/dynamic_reconfigure/cmake/.. /home/denis/catkin_ws6/src/devel/share/ur_driver /home/denis/catkin_ws6/src/devel/include/ur_driver /home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver
+/home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h: /home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/cfg/URDriver.cfg
+/home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h: /opt/ros/noetic/share/dynamic_reconfigure/templates/ConfigType.py.template
+/home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h: /opt/ros/noetic/share/dynamic_reconfigure/templates/ConfigType.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/denis/catkin_ws6/ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating dynamic reconfigure files from cfg/URDriver.cfg: /home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h /home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py"
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_driver && ../../catkin_generated/env_cached.sh /home/denis/catkin_ws6/ws/build/universal_robot/ur_driver/setup_custom_pythonpath.sh /home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/cfg/URDriver.cfg /opt/ros/noetic/share/dynamic_reconfigure/cmake/.. /home/denis/catkin_ws6/ws/devel/share/ur_driver /home/denis/catkin_ws6/ws/devel/include/ur_driver /home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver
 
-/home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig.dox: /home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig.dox
+/home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig.dox: /home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig.dox
 
-/home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig-usage.dox: /home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig-usage.dox
+/home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig-usage.dox: /home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig-usage.dox
 
-/home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py: /home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py
+/home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py: /home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py
 
-/home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig.wikidoc: /home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig.wikidoc
+/home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig.wikidoc: /home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig.wikidoc
 
 ur_driver_gencfg: universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg
-ur_driver_gencfg: /home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h
-ur_driver_gencfg: /home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig.dox
-ur_driver_gencfg: /home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig-usage.dox
-ur_driver_gencfg: /home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py
-ur_driver_gencfg: /home/denis/catkin_ws6/src/devel/share/ur_driver/docs/URDriverConfig.wikidoc
+ur_driver_gencfg: /home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h
+ur_driver_gencfg: /home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig.dox
+ur_driver_gencfg: /home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig-usage.dox
+ur_driver_gencfg: /home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver/cfg/URDriverConfig.py
+ur_driver_gencfg: /home/denis/catkin_ws6/ws/devel/share/ur_driver/docs/URDriverConfig.wikidoc
 ur_driver_gencfg: universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/build.make
 
 .PHONY : ur_driver_gencfg
@@ -91,10 +91,10 @@ universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/build: ur_driver_gencf
 .PHONY : universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/build
 
 universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_driver && $(CMAKE_COMMAND) -P CMakeFiles/ur_driver_gencfg.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_driver && $(CMAKE_COMMAND) -P CMakeFiles/ur_driver_gencfg.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/clean
 
 universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/universal_robot/ur_driver /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/universal_robot/ur_driver /home/denis/catkin_ws6/src/build/universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/universal_robot/ur_driver /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/universal_robot/ur_driver /home/denis/catkin_ws6/ws/build/universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_driver/CMakeFiles/ur_driver_gencfg.dir/depend
 

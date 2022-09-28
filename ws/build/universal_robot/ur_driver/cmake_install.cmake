@@ -1,8 +1,8 @@
-# Install script for directory: /home/denis/catkin_ws6/src/src/universal_robot/ur_driver
+# Install script for directory: /home/denis/catkin_ws6/ws/src/universal_robot/ur_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/denis/catkin_ws6/src/install")
+  set(CMAKE_INSTALL_PREFIX "/home/denis/catkin_ws6/ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,51 +38,51 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/denis/catkin_ws6/src/build/universal_robot/ur_driver/catkin_generated/safe_execute_install.cmake")
+  include("/home/denis/catkin_ws6/ws/build/universal_robot/ur_driver/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ur_driver" TYPE FILE FILES "/home/denis/catkin_ws6/src/devel/include/ur_driver/URDriverConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ur_driver" TYPE FILE FILES "/home/denis/catkin_ws6/ws/devel/include/ur_driver/URDriverConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver/cfg")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/ur_driver" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur_driver/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/ur_driver" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur_driver/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/denis/catkin_ws6/src/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/denis/catkin_ws6/ws/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver/cmake" TYPE FILE FILES
-    "/home/denis/catkin_ws6/src/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig.cmake"
-    "/home/denis/catkin_ws6/src/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig-version.cmake"
+    "/home/denis/catkin_ws6/ws/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig.cmake"
+    "/home/denis/catkin_ws6/ws/build/universal_robot/ur_driver/catkin_generated/installspace/ur_driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver" TYPE FILE FILES "/home/denis/catkin_ws6/src/src/universal_robot/ur_driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver" TYPE FILE FILES "/home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur_driver" TYPE PROGRAM FILES
-    "/home/denis/catkin_ws6/src/src/universal_robot/ur_driver/test_move.py"
-    "/home/denis/catkin_ws6/src/src/universal_robot/ur_driver/test_io.py"
+    "/home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/test_move.py"
+    "/home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/test_io.py"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur_driver" TYPE PROGRAM FILES "/home/denis/catkin_ws6/src/src/universal_robot/ur_driver/src/ur_driver/driver.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ur_driver" TYPE PROGRAM FILES "/home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/src/ur_driver/driver.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur_driver" TYPE FILE FILES
-    "/home/denis/catkin_ws6/src/src/universal_robot/ur_driver/prog"
-    "/home/denis/catkin_ws6/src/src/universal_robot/ur_driver/prog_reset"
+    "/home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/prog"
+    "/home/denis/catkin_ws6/ws/src/universal_robot/ur_driver/prog_reset"
     )
 endif()
 

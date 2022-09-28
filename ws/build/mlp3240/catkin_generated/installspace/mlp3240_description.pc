@@ -1,4 +1,4 @@
-prefix=/home/denis/catkin_ws6/src/install
+prefix=/home/denis/catkin_ws6/ws/install
 
 Name: mlp3240_description
 Description: Description of mlp3240_description

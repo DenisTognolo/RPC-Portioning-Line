@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Include any dependencies generated for this target.
 include gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/depend.make
@@ -57,26 +57,26 @@ include gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_gras
 # Include the compile flags for this target's objects.
 include gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/flags.make
 
-gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h: /home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.proto
+gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h: /home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.proto
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h: /usr/bin/protoc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/denis/catkin_ws6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running cpp protocol buffer compiler on grasp_event.proto"
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/protoc --cpp_out /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs -I /home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs /home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/denis/catkin_ws6/ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running cpp protocol buffer compiler on grasp_event.proto"
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/protoc --cpp_out /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs -I /home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs /home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.proto
 
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h
 	@$(CMAKE_COMMAND) -E touch_nocreate gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc
 
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/flags.make
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/denis/catkin_ws6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o"
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o -c /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/denis/catkin_ws6/ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o"
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o -c /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc
 
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.i"
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc > CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.i
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc > CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.i
 
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.s"
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc -o CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.s
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc -o CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.s
 
 # Object files for target gazebo_grasp_msgs
 gazebo_grasp_msgs_OBJECTS = \
@@ -85,24 +85,24 @@ gazebo_grasp_msgs_OBJECTS = \
 # External object files for target gazebo_grasp_msgs
 gazebo_grasp_msgs_EXTERNAL_OBJECTS =
 
-/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.so: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o
-/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.so: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/build.make
-/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.so: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/denis/catkin_ws6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library /home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.so"
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_grasp_msgs.dir/link.txt --verbose=$(VERBOSE)
+/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.so: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o
+/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.so: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/build.make
+/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.so: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/denis/catkin_ws6/ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library /home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.so"
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_grasp_msgs.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/build: /home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.so
+gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/build: /home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.so
 
 .PHONY : gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/build
 
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_grasp_msgs.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_grasp_msgs.dir/cmake_clean.cmake
 .PHONY : gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/clean
 
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/depend: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/depend: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/CMakeFiles/gazebo_grasp_msgs.dir/depend
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles /home/denis/catkin_ws6/src/build/mlp3240/CMakeFiles/progress.marks
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles /home/denis/catkin_ws6/ws/build/mlp3240/CMakeFiles/progress.marks
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/clean
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ _catkin_empty_exported_target: mlp3240/CMakeFiles/_catkin_empty_exported_target.
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/build.make mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/build.make mlp3240/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -207,6 +207,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

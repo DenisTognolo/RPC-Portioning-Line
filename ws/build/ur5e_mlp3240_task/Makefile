@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles /home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/CMakeFiles/progress.marks
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles /home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/CMakeFiles/progress.marks
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/clean
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ pick_and_place: ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/rule
 
 # fast build rule for target.
 pick_and_place/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build
 .PHONY : pick_and_place/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ ur5e_mlp3240_task_genpy: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.di
 
 # fast build rule for target.
 ur5e_mlp3240_task_genpy/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genpy.dir/build
 .PHONY : ur5e_mlp3240_task_genpy/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ ur5e_mlp3240_task_generate_messages_py: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp324
 
 # fast build rule for target.
 ur5e_mlp3240_task_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_py.dir/build
 .PHONY : ur5e_mlp3240_task_generate_messages_py/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ ur5e_mlp3240_task_gennodejs: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genn
 
 # fast build rule for target.
 ur5e_mlp3240_task_gennodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gennodejs.dir/build
 .PHONY : ur5e_mlp3240_task_gennodejs/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ ur5e_mlp3240_task_genlisp: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlis
 
 # fast build rule for target.
 ur5e_mlp3240_task_genlisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_genlisp.dir/build
 .PHONY : ur5e_mlp3240_task_genlisp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ topic_tools_generate_messages_eus: ur5e_mlp3240_task/CMakeFiles/topic_tools_gene
 
 # fast build rule for target.
 topic_tools_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_eus.dir/build
 .PHONY : topic_tools_generate_messages_eus/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ ur5e_mlp3240_task_geneus: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.
 
 # fast build rule for target.
 ur5e_mlp3240_task_geneus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_geneus.dir/build
 .PHONY : ur5e_mlp3240_task_geneus/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ pcl_ros_gencfg: ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/rule
 
 # fast build rule for target.
 pcl_ros_gencfg/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_ros_gencfg.dir/build
 .PHONY : pcl_ros_gencfg/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ nodelet_topic_tools_gencfg: ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gen
 
 # fast build rule for target.
 nodelet_topic_tools_gencfg/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
 .PHONY : nodelet_topic_tools_gencfg/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ pcl_msgs_generate_messages_cpp: ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_m
 
 # fast build rule for target.
 pcl_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
 .PHONY : pcl_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ nodelet_generate_messages_py: ur5e_mlp3240_task/CMakeFiles/nodelet_generate_mess
 
 # fast build rule for target.
 nodelet_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_py.dir/build
 .PHONY : nodelet_generate_messages_py/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ bond_generate_messages_eus: ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_
 
 # fast build rule for target.
 bond_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_eus.dir/build
 .PHONY : bond_generate_messages_eus/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ bond_generate_messages_cpp: ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_
 
 # fast build rule for target.
 bond_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ bond_generate_messages_lisp: ur5e_mlp3240_task/CMakeFiles/bond_generate_messages
 
 # fast build rule for target.
 bond_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_lisp.dir/build
 .PHONY : bond_generate_messages_lisp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ pcl_msgs_generate_messages_lisp: ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_
 
 # fast build rule for target.
 pcl_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
 .PHONY : pcl_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ nodelet_generate_messages_lisp: ur5e_mlp3240_task/CMakeFiles/nodelet_generate_me
 
 # fast build rule for target.
 nodelet_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 .PHONY : nodelet_generate_messages_lisp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ nodelet_generate_messages_eus: ur5e_mlp3240_task/CMakeFiles/nodelet_generate_mes
 
 # fast build rule for target.
 nodelet_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_eus.dir/build
 .PHONY : nodelet_generate_messages_eus/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ pcl_msgs_generate_messages_nodejs: ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generat
 
 # fast build rule for target.
 pcl_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
 .PHONY : pcl_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ bond_generate_messages_py: ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_p
 
 # fast build rule for target.
 bond_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_py.dir/build
 .PHONY : bond_generate_messages_py/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ ur5e_mlp3240_task_generate_messages_nodejs: ur5e_mlp3240_task/CMakeFiles/ur5e_ml
 
 # fast build rule for target.
 ur5e_mlp3240_task_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_nodejs.dir/build
 .PHONY : ur5e_mlp3240_task_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ bond_generate_messages_nodejs: ur5e_mlp3240_task/CMakeFiles/bond_generate_messag
 
 # fast build rule for target.
 bond_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/bond_generate_messages_nodejs.dir/build
 .PHONY : bond_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ nodelet_generate_messages_nodejs: ur5e_mlp3240_task/CMakeFiles/nodelet_generate_
 
 # fast build rule for target.
 nodelet_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 .PHONY : nodelet_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ topic_tools_generate_messages_py: ur5e_mlp3240_task/CMakeFiles/topic_tools_gener
 
 # fast build rule for target.
 topic_tools_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_py.dir/build
 .PHONY : topic_tools_generate_messages_py/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ ur5e_mlp3240_task_generate_messages_lisp: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3
 
 # fast build rule for target.
 ur5e_mlp3240_task_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_lisp.dir/build
 .PHONY : ur5e_mlp3240_task_generate_messages_lisp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -539,12 +539,12 @@ nodelet_generate_messages_cpp: ur5e_mlp3240_task/CMakeFiles/nodelet_generate_mes
 
 # fast build rule for target.
 nodelet_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/nodelet_generate_messages_cpp.dir/build
 .PHONY : nodelet_generate_messages_cpp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -554,12 +554,12 @@ ur5e_mlp3240_task_generate_messages: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_t
 
 # fast build rule for target.
 ur5e_mlp3240_task_generate_messages/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages.dir/build
 .PHONY : ur5e_mlp3240_task_generate_messages/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -569,12 +569,12 @@ topic_tools_generate_messages_lisp: ur5e_mlp3240_task/CMakeFiles/topic_tools_gen
 
 # fast build rule for target.
 topic_tools_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
 .PHONY : topic_tools_generate_messages_lisp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
 
 # Convenience name for target.
@@ -584,12 +584,12 @@ moveit_ros_manipulation_gencfg: ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipula
 
 # fast build rule for target.
 moveit_ros_manipulation_gencfg/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make ur5e_mlp3240_task/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
 .PHONY : moveit_ros_manipulation_gencfg/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -599,12 +599,12 @@ topic_tools_generate_messages_cpp: ur5e_mlp3240_task/CMakeFiles/topic_tools_gene
 
 # fast build rule for target.
 topic_tools_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
 .PHONY : topic_tools_generate_messages_cpp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -614,12 +614,12 @@ pcl_msgs_generate_messages_eus: ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_m
 
 # fast build rule for target.
 pcl_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
 .PHONY : pcl_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -629,12 +629,12 @@ pcl_msgs_generate_messages_py: ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_me
 
 # fast build rule for target.
 pcl_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/build.make ur5e_mlp3240_task/CMakeFiles/pcl_msgs_generate_messages_py.dir/build
 .PHONY : pcl_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -644,12 +644,12 @@ topic_tools_generate_messages_nodejs: ur5e_mlp3240_task/CMakeFiles/topic_tools_g
 
 # fast build rule for target.
 topic_tools_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make ur5e_mlp3240_task/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
 .PHONY : topic_tools_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -659,12 +659,12 @@ ur5e_mlp3240_task_generate_messages_cpp: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp32
 
 # fast build rule for target.
 ur5e_mlp3240_task_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_cpp.dir/build
 .PHONY : ur5e_mlp3240_task_generate_messages_cpp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/rule
 
 # Convenience name for target.
@@ -674,12 +674,12 @@ ur5e_mlp3240_task_gencpp: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.
 
 # fast build rule for target.
 ur5e_mlp3240_task_gencpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_gencpp.dir/build
 .PHONY : ur5e_mlp3240_task_gencpp/fast
 
 # Convenience name for target.
 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/rule
 .PHONY : ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -689,7 +689,7 @@ ur5e_mlp3240_task_generate_messages_eus: ur5e_mlp3240_task/CMakeFiles/ur5e_mlp32
 
 # fast build rule for target.
 ur5e_mlp3240_task_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/build.make ur5e_mlp3240_task/CMakeFiles/ur5e_mlp3240_task_generate_messages_eus.dir/build
 .PHONY : ur5e_mlp3240_task_generate_messages_eus/fast
 
 src/pick_and_place.o: src/pick_and_place.cpp.o
@@ -698,7 +698,7 @@ src/pick_and_place.o: src/pick_and_place.cpp.o
 
 # target to build an object file
 src/pick_and_place.cpp.o:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.o
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.o
 .PHONY : src/pick_and_place.cpp.o
 
 src/pick_and_place.i: src/pick_and_place.cpp.i
@@ -707,7 +707,7 @@ src/pick_and_place.i: src/pick_and_place.cpp.i
 
 # target to preprocess a source file
 src/pick_and_place.cpp.i:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.i
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.i
 .PHONY : src/pick_and_place.cpp.i
 
 src/pick_and_place.s: src/pick_and_place.cpp.s
@@ -716,7 +716,7 @@ src/pick_and_place.s: src/pick_and_place.cpp.s
 
 # target to generate assembly for a file
 src/pick_and_place.cpp.s:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.s
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/build.make ur5e_mlp3240_task/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.s
 .PHONY : src/pick_and_place.cpp.s
 
 # Help Target
@@ -781,6 +781,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

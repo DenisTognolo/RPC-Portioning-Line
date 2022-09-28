@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_version_helpers/src/GazeboVersionHelpers.cpp" "/home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.o"
+  "/home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_version_helpers/src/GazeboVersionHelpers.cpp" "/home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -30,7 +30,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_version_helpers/include"
+  "/home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_version_helpers/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/gazebo-11"
   "/usr/include/bullet"

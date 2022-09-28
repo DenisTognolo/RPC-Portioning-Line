@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/progress.marks
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/progress.marks
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/clean
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ gazebo_grasp_fix: gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo
 
 # fast build rule for target.
 gazebo_grasp_fix/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build
 .PHONY : gazebo_grasp_fix/fast
 
 src/GazeboGraspFix.o: src/GazeboGraspFix.cpp.o
@@ -188,7 +188,7 @@ src/GazeboGraspFix.o: src/GazeboGraspFix.cpp.o
 
 # target to build an object file
 src/GazeboGraspFix.cpp.o:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspFix.cpp.o
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspFix.cpp.o
 .PHONY : src/GazeboGraspFix.cpp.o
 
 src/GazeboGraspFix.i: src/GazeboGraspFix.cpp.i
@@ -197,7 +197,7 @@ src/GazeboGraspFix.i: src/GazeboGraspFix.cpp.i
 
 # target to preprocess a source file
 src/GazeboGraspFix.cpp.i:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspFix.cpp.i
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspFix.cpp.i
 .PHONY : src/GazeboGraspFix.cpp.i
 
 src/GazeboGraspFix.s: src/GazeboGraspFix.cpp.s
@@ -206,7 +206,7 @@ src/GazeboGraspFix.s: src/GazeboGraspFix.cpp.s
 
 # target to generate assembly for a file
 src/GazeboGraspFix.cpp.s:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspFix.cpp.s
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspFix.cpp.s
 .PHONY : src/GazeboGraspFix.cpp.s
 
 src/GazeboGraspGripper.o: src/GazeboGraspGripper.cpp.o
@@ -215,7 +215,7 @@ src/GazeboGraspGripper.o: src/GazeboGraspGripper.cpp.o
 
 # target to build an object file
 src/GazeboGraspGripper.cpp.o:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspGripper.cpp.o
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspGripper.cpp.o
 .PHONY : src/GazeboGraspGripper.cpp.o
 
 src/GazeboGraspGripper.i: src/GazeboGraspGripper.cpp.i
@@ -224,7 +224,7 @@ src/GazeboGraspGripper.i: src/GazeboGraspGripper.cpp.i
 
 # target to preprocess a source file
 src/GazeboGraspGripper.cpp.i:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspGripper.cpp.i
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspGripper.cpp.i
 .PHONY : src/GazeboGraspGripper.cpp.i
 
 src/GazeboGraspGripper.s: src/GazeboGraspGripper.cpp.s
@@ -233,7 +233,7 @@ src/GazeboGraspGripper.s: src/GazeboGraspGripper.cpp.s
 
 # target to generate assembly for a file
 src/GazeboGraspGripper.cpp.s:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspGripper.cpp.s
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/build.make gazebo_grasp_fix_plugins/gazebo_grasp_plugin/CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspGripper.cpp.s
 .PHONY : src/GazeboGraspGripper.cpp.s
 
 # Help Target
@@ -267,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

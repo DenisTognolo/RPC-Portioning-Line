@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include;/usr/include".split(';') if
 PROJECT_CATKIN_DEPENDS = "roscpp;geometry_msgs;moveit_core;moveit_kinematics;moveit_ros_planning;pluginlib;tf_conversions".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lur5_kin;-lur5_moveit_plugin;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0".split(';') if "-lur5_kin;-lur5_moveit_plugin;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0" != "" else []
 PROJECT_NAME = "ur_kinematics"
-PROJECT_SPACE_DIR = "/home/denis/catkin_ws6/src/install"
+PROJECT_SPACE_DIR = "/home/denis/catkin_ws6/ws/install"
 PROJECT_VERSION = "1.2.7"

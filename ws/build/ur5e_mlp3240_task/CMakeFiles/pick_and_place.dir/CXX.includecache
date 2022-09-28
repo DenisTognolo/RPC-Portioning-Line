@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/denis/catkin_ws6/src/src/ur5e_mlp3240_task/include/chocolate_portioner_env.h
+/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task/include/chocolate_portioner_env.h
 map
 -
 
-/home/denis/catkin_ws6/src/src/ur5e_mlp3240_task/include/ur5e_gripper_interface.h
+/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task/include/ur5e_gripper_interface.h
 moveit/planning_scene_interface/planning_scene_interface.h
 -
 moveit/move_group_interface/move_group_interface.h
@@ -18,7 +18,7 @@ moveit/move_group_interface/move_group_interface.h
 tf/LinearMath/Quaternion.h
 -
 
-/home/denis/catkin_ws6/src/src/ur5e_mlp3240_task/src/pick_and_place.cpp
+/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task/src/pick_and_place.cpp
 ur5e_gripper_interface.h
 -
 chocolate_portioner_env.h

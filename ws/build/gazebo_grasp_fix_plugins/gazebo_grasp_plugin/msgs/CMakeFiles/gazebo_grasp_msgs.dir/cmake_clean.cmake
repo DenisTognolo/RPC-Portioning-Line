@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.pdb"
-  "/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_msgs.so"
+  "/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.pdb"
+  "/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_msgs.so"
   "CMakeFiles/gazebo_grasp_msgs.dir/grasp_event.pb.cc.o"
   "grasp_event.pb.cc"
   "grasp_event.pb.h"

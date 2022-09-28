@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/src/disable_link_plugin.cpp" "/home/denis/catkin_ws6/src/build/roboticsgroup_upatras_gazebo_plugins/CMakeFiles/roboticsgroup_upatras_gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o"
+  "/home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins/src/disable_link_plugin.cpp" "/home/denis/catkin_ws6/ws/build/roboticsgroup_upatras_gazebo_plugins/CMakeFiles/roboticsgroup_upatras_gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -30,7 +30,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/include"
+  "/home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/gazebo-11"
   "/usr/include/bullet"

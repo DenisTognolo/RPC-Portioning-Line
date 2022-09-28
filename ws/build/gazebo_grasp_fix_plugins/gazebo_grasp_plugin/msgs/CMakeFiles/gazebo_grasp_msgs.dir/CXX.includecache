@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc
+/home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.cc
 grasp_event.pb.h
-/home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h
+/home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -28,9 +28,9 @@ google/protobuf/reflection_ops.h
 google/protobuf/wire_format.h
 -
 third_party/protobuf/version.h
-/home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/third_party/protobuf/version.h
+/home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/third_party/protobuf/version.h
 
-/home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h
+/home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_grasp_plugin/msgs/grasp_event.pb.h
 string
 -
 google/protobuf/stubs/common.h

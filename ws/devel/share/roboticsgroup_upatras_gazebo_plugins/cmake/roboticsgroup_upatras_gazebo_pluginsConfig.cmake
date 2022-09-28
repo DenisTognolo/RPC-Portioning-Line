@@ -67,14 +67,14 @@ set(roboticsgroup_upatras_gazebo_plugins_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(roboticsgroup_upatras_gazebo_plugins_SOURCE_PREFIX /home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins)
-  set(roboticsgroup_upatras_gazebo_plugins_DEVEL_PREFIX /home/denis/catkin_ws6/src/devel)
+  set(roboticsgroup_upatras_gazebo_plugins_SOURCE_PREFIX /home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins)
+  set(roboticsgroup_upatras_gazebo_plugins_DEVEL_PREFIX /home/denis/catkin_ws6/ws/devel)
   set(roboticsgroup_upatras_gazebo_plugins_INSTALL_PREFIX "")
   set(roboticsgroup_upatras_gazebo_plugins_PREFIX ${roboticsgroup_upatras_gazebo_plugins_DEVEL_PREFIX})
 else()
   set(roboticsgroup_upatras_gazebo_plugins_SOURCE_PREFIX "")
   set(roboticsgroup_upatras_gazebo_plugins_DEVEL_PREFIX "")
-  set(roboticsgroup_upatras_gazebo_plugins_INSTALL_PREFIX /home/denis/catkin_ws6/src/install)
+  set(roboticsgroup_upatras_gazebo_plugins_INSTALL_PREFIX /home/denis/catkin_ws6/ws/install)
   set(roboticsgroup_upatras_gazebo_plugins_PREFIX ${roboticsgroup_upatras_gazebo_plugins_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(roboticsgroup_upatras_gazebo_plugins_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/include " STREQUAL " ")
+if(NOT "/home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins/include " STREQUAL " ")
   set(roboticsgroup_upatras_gazebo_plugins_INCLUDE_DIRS "")
-  set(_include_dirs "/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/include")
+  set(_include_dirs "/home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins/include")
   if(NOT "https://github.com/roboticsgroup/roboticsgroup_upatras_gazebo_plugins/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/roboticsgroup/roboticsgroup_upatras_gazebo_plugins/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/incl
         message(FATAL_ERROR "Project 'roboticsgroup_upatras_gazebo_plugins' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'roboticsgroup_upatras_gazebo_plugins' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'roboticsgroup_upatras_gazebo_plugins' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins/${idir}'.  ${_report}")
     endif()
     _list_append_unique(roboticsgroup_upatras_gazebo_plugins_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/denis/catkin_ws6/src/devel/lib;/home/denis/catkin_ws6/src/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/denis/catkin_ws6/ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Utility rule file for _ur_msgs_generate_messages_check_deps_IOStates.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
 include universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/progress.make
 
 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates:
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ur_msgs /home/denis/catkin_ws6/src/src/universal_robot/ur_msgs/msg/IOStates.msg ur_msgs/Digital:ur_msgs/Analog
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py ur_msgs /home/denis/catkin_ws6/ws/src/universal_robot/ur_msgs/msg/IOStates.msg ur_msgs/Digital:ur_msgs/Analog
 
 _ur_msgs_generate_messages_check_deps_IOStates: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates
 _ur_msgs_generate_messages_check_deps_IOStates: universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/build.make
@@ -67,10 +67,10 @@ universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOState
 .PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/build
 
 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/clean
 
 universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/universal_robot/ur_msgs /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/universal_robot/ur_msgs /home/denis/catkin_ws6/src/build/universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/universal_robot/ur_msgs /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/universal_robot/ur_msgs /home/denis/catkin_ws6/ws/build/universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_msgs/CMakeFiles/_ur_msgs_generate_messages_check_deps_IOStates.dir/depend
 

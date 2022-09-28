@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_fix.pdb"
-  "/home/denis/catkin_ws6/src/devel/lib/libgazebo_grasp_fix.so"
+  "/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_fix.pdb"
+  "/home/denis/catkin_ws6/ws/devel/lib/libgazebo_grasp_fix.so"
   "CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspFix.cpp.o"
   "CMakeFiles/gazebo_grasp_fix.dir/src/GazeboGraspGripper.cpp.o"
 )

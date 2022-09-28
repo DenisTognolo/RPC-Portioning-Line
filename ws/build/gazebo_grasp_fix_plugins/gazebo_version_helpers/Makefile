@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/progress.marks
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/src/build/CMakeFiles 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/progress.marks
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denis/catkin_ws6/ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/clean
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/preinstall
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ gazebo_version_helpers: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFil
 
 # fast build rule for target.
 gazebo_version_helpers/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build
 .PHONY : gazebo_version_helpers/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ trajectory_msgs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_versio
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ trajectory_msgs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ sensor_msgs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_helpe
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ tf_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMa
 
 # fast build rule for target.
 tf_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_nodejs.dir/build
 .PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ gazebo_msgs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_helpe
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/build
 .PHONY : gazebo_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ std_srvs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_helpe
 
 # fast build rule for target.
 std_srvs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ std_srvs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_helpers
 
 # fast build rule for target.
 std_srvs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ std_srvs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_helpers/
 
 # fast build rule for target.
 std_srvs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_eus.dir/build
 .PHONY : std_srvs_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ std_srvs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_helpers/
 
 # fast build rule for target.
 std_srvs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ dynamic_reconfigure_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_vers
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ tf2_msgs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_helpers/
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ gazebo_msgs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_helper
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_py.dir/build
 .PHONY : gazebo_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ geometry_msgs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_help
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ gazebo_ros_gencfg: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/ga
 
 # fast build rule for target.
 gazebo_ros_gencfg/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_ros_gencfg.dir/build
 .PHONY : gazebo_ros_gencfg/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ roscpp_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_helpers/CM
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ sensor_msgs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_help
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ sensor_msgs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_helpe
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ roscpp_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_helpers/CM
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ sensor_msgs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_helper
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ tf2_msgs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_helpers/
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ rosgraph_msgs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ actionlib_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_helpers
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ actionlib_msgs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_hel
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -539,12 +539,12 @@ geometry_msgs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_he
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -554,12 +554,12 @@ tf_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeF
 
 # fast build rule for target.
 tf_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -569,12 +569,12 @@ roscpp_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_helpers
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -584,12 +584,12 @@ std_srvs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_helpers/C
 
 # fast build rule for target.
 std_srvs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/std_srvs_generate_messages_py.dir/build
 .PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -599,12 +599,12 @@ rosgraph_msgs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_hel
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -614,12 +614,12 @@ tf_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeF
 
 # fast build rule for target.
 tf_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_eus.dir/build
 .PHONY : tf_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -629,12 +629,12 @@ rosgraph_msgs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_he
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -644,12 +644,12 @@ tf_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMake
 
 # fast build rule for target.
 tf_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -659,12 +659,12 @@ dynamic_reconfigure_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_versi
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -674,12 +674,12 @@ geometry_msgs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_hel
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -689,12 +689,12 @@ dynamic_reconfigure_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_ve
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -704,12 +704,12 @@ gazebo_msgs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_help
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/build
 .PHONY : gazebo_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -719,12 +719,12 @@ tf2_msgs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_helpers/C
 
 # fast build rule for target.
 tf2_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -734,12 +734,12 @@ roscpp_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_helpers/C
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -749,12 +749,12 @@ actionlib_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_helper
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -764,12 +764,12 @@ rosgraph_msgs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_help
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -779,12 +779,12 @@ geometry_msgs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_hel
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -794,12 +794,12 @@ sensor_msgs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_he
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -809,12 +809,12 @@ trajectory_msgs_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_he
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -824,12 +824,12 @@ rosgraph_msgs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_hel
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -839,12 +839,12 @@ actionlib_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_helpers
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -854,12 +854,12 @@ actionlib_msgs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_he
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -869,12 +869,12 @@ actionlib_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_help
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -884,12 +884,12 @@ gazebo_msgs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_he
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/build
 .PHONY : gazebo_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -899,12 +899,12 @@ roscpp_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMa
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -914,12 +914,12 @@ trajectory_msgs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_h
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
 .PHONY : trajectory_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -929,12 +929,12 @@ actionlib_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_helpers/
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -944,12 +944,12 @@ trajectory_msgs_generate_messages_cpp: gazebo_grasp_fix_plugins/gazebo_version_h
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
 .PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -959,12 +959,12 @@ tf_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFi
 
 # fast build rule for target.
 tf_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -974,12 +974,12 @@ actionlib_msgs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -989,12 +989,12 @@ actionlib_msgs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_h
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1004,12 +1004,12 @@ tf2_msgs_generate_messages_lisp: gazebo_grasp_fix_plugins/gazebo_version_helpers
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1019,12 +1019,12 @@ tf2_msgs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_helpe
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 
 # Convenience name for target.
@@ -1034,12 +1034,12 @@ dynamic_reconfigure_gencfg: gazebo_grasp_fix_plugins/gazebo_version_helpers/CMak
 
 # fast build rule for target.
 dynamic_reconfigure_gencfg/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 .PHONY : dynamic_reconfigure_gencfg/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1049,12 +1049,12 @@ actionlib_msgs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_he
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1064,12 +1064,12 @@ dynamic_reconfigure_generate_messages_py: gazebo_grasp_fix_plugins/gazebo_versio
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1079,12 +1079,12 @@ geometry_msgs_generate_messages_nodejs: gazebo_grasp_fix_plugins/gazebo_version_
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1094,12 +1094,12 @@ dynamic_reconfigure_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_versi
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f CMakeFiles/Makefile2 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1109,7 +1109,7 @@ gazebo_msgs_generate_messages_eus: gazebo_grasp_fix_plugins/gazebo_version_helpe
 
 # fast build rule for target.
 gazebo_msgs_generate_messages_eus/fast:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
 .PHONY : gazebo_msgs_generate_messages_eus/fast
 
 src/GazeboVersionHelpers.o: src/GazeboVersionHelpers.cpp.o
@@ -1118,7 +1118,7 @@ src/GazeboVersionHelpers.o: src/GazeboVersionHelpers.cpp.o
 
 # target to build an object file
 src/GazeboVersionHelpers.cpp.o:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.o
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.o
 .PHONY : src/GazeboVersionHelpers.cpp.o
 
 src/GazeboVersionHelpers.i: src/GazeboVersionHelpers.cpp.i
@@ -1127,7 +1127,7 @@ src/GazeboVersionHelpers.i: src/GazeboVersionHelpers.cpp.i
 
 # target to preprocess a source file
 src/GazeboVersionHelpers.cpp.i:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.i
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.i
 .PHONY : src/GazeboVersionHelpers.cpp.i
 
 src/GazeboVersionHelpers.s: src/GazeboVersionHelpers.cpp.s
@@ -1136,7 +1136,7 @@ src/GazeboVersionHelpers.s: src/GazeboVersionHelpers.cpp.s
 
 # target to generate assembly for a file
 src/GazeboVersionHelpers.cpp.s:
-	cd /home/denis/catkin_ws6/src/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.s
+	cd /home/denis/catkin_ws6/ws/build && $(MAKE) -f gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/build.make gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/gazebo_version_helpers.dir/src/GazeboVersionHelpers.cpp.s
 .PHONY : src/GazeboVersionHelpers.cpp.s
 
 # Help Target
@@ -1229,6 +1229,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

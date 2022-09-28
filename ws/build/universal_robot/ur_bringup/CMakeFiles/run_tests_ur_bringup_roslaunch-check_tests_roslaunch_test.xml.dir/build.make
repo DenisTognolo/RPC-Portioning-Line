@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Utility rule file for run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
 include universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/progress.make
 
 universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml:
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_bringup && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/denis/catkin_ws6/src/build/test_results/ur_bringup/roslaunch-check_tests_roslaunch_test.xml.xml "/usr/bin/cmake -E make_directory /home/denis/catkin_ws6/src/build/test_results/ur_bringup" "/opt/ros/noetic/share/roslaunch/cmake/../scripts/roslaunch-check -o \"/home/denis/catkin_ws6/src/build/test_results/ur_bringup/roslaunch-check_tests_roslaunch_test.xml.xml\" \"/home/denis/catkin_ws6/src/src/universal_robot/ur_bringup/tests/roslaunch_test.xml\" "
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_bringup && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/run_tests.py /home/denis/catkin_ws6/ws/build/test_results/ur_bringup/roslaunch-check_tests_roslaunch_test.xml.xml "/usr/bin/cmake -E make_directory /home/denis/catkin_ws6/ws/build/test_results/ur_bringup" "/opt/ros/noetic/share/roslaunch/cmake/../scripts/roslaunch-check -o \"/home/denis/catkin_ws6/ws/build/test_results/ur_bringup/roslaunch-check_tests_roslaunch_test.xml.xml\" \"/home/denis/catkin_ws6/ws/src/universal_robot/ur_bringup/tests/roslaunch_test.xml\" "
 
 run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml: universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml
 run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml: universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/build.make
@@ -67,10 +67,10 @@ universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests
 .PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/build
 
 universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_bringup && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_bringup && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/clean
 
 universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/universal_robot/ur_bringup /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/universal_robot/ur_bringup /home/denis/catkin_ws6/src/build/universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/universal_robot/ur_bringup /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/universal_robot/ur_bringup /home/denis/catkin_ws6/ws/build/universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_bringup/CMakeFiles/run_tests_ur_bringup_roslaunch-check_tests_roslaunch_test.xml.dir/depend
 

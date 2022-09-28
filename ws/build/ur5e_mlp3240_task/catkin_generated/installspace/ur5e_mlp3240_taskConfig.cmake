@@ -67,14 +67,14 @@ set(ur5e_mlp3240_task_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ur5e_mlp3240_task_SOURCE_PREFIX /home/denis/catkin_ws6/src/src/ur5e_mlp3240_task)
-  set(ur5e_mlp3240_task_DEVEL_PREFIX /home/denis/catkin_ws6/src/devel)
+  set(ur5e_mlp3240_task_SOURCE_PREFIX /home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task)
+  set(ur5e_mlp3240_task_DEVEL_PREFIX /home/denis/catkin_ws6/ws/devel)
   set(ur5e_mlp3240_task_INSTALL_PREFIX "")
   set(ur5e_mlp3240_task_PREFIX ${ur5e_mlp3240_task_DEVEL_PREFIX})
 else()
   set(ur5e_mlp3240_task_SOURCE_PREFIX "")
   set(ur5e_mlp3240_task_DEVEL_PREFIX "")
-  set(ur5e_mlp3240_task_INSTALL_PREFIX /home/denis/catkin_ws6/src/install)
+  set(ur5e_mlp3240_task_INSTALL_PREFIX /home/denis/catkin_ws6/ws/install)
   set(ur5e_mlp3240_task_PREFIX ${ur5e_mlp3240_task_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/denis/catkin_ws6/src/install/lib;/home/denis/catkin_ws6/src/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/denis/catkin_ws6/ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

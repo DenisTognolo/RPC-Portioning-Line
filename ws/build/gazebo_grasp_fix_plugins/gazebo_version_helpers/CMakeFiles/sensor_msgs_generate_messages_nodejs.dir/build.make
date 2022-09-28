@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Utility rule file for sensor_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 

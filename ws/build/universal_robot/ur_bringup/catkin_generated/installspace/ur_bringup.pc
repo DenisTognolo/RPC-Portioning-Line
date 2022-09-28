@@ -1,4 +1,4 @@
-prefix=/home/denis/catkin_ws6/src/install
+prefix=/home/denis/catkin_ws6/ws/install
 
 Name: ur_bringup
 Description: Description of ur_bringup

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/usr/include/eigen3".split(';') if "/usr/incl
 PROJECT_CATKIN_DEPENDS = "moveit_core;moveit_ros_planning_interface;interactive_markers;tf2_geometry_msgs;actionlib_msgs;control_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ur5e_mlp3240_task"
-PROJECT_SPACE_DIR = "/home/denis/catkin_ws6/src/devel"
+PROJECT_SPACE_DIR = "/home/denis/catkin_ws6/ws/devel"
 PROJECT_VERSION = "0.0.0"

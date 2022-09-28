@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/include/roboticsgroup_upatras_gazebo_plugins/disable_link_plugin.h
+/home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins/include/roboticsgroup_upatras_gazebo_plugins/disable_link_plugin.h
 ros/ros.h
 -
 gazebo/common/Plugin.hh
@@ -14,7 +14,7 @@ gazebo/common/Plugin.hh
 gazebo/physics/physics.hh
 -
 
-/home/denis/catkin_ws6/src/src/roboticsgroup_upatras_gazebo_plugins/src/disable_link_plugin.cpp
+/home/denis/catkin_ws6/ws/src/roboticsgroup_upatras_gazebo_plugins/src/disable_link_plugin.cpp
 roboticsgroup_upatras_gazebo_plugins/disable_link_plugin.h
 -
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Include any dependencies generated for this target.
 include universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/depend.make
@@ -58,17 +58,17 @@ include universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/progress.make
 include universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/flags.make
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/flags.make
-universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o: /home/denis/catkin_ws6/src/src/universal_robot/ur_kinematics/src/ur_kin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/denis/catkin_ws6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o"
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_kinematics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o -c /home/denis/catkin_ws6/src/src/universal_robot/ur_kinematics/src/ur_kin.cpp
+universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o: /home/denis/catkin_ws6/ws/src/universal_robot/ur_kinematics/src/ur_kin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/denis/catkin_ws6/ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o"
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_kinematics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o -c /home/denis/catkin_ws6/ws/src/universal_robot/ur_kinematics/src/ur_kin.cpp
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i"
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/denis/catkin_ws6/src/src/universal_robot/ur_kinematics/src/ur_kin.cpp > CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/denis/catkin_ws6/ws/src/universal_robot/ur_kinematics/src/ur_kin.cpp > CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s"
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/denis/catkin_ws6/src/src/universal_robot/ur_kinematics/src/ur_kin.cpp -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_kinematics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/denis/catkin_ws6/ws/src/universal_robot/ur_kinematics/src/ur_kin.cpp -o CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s
 
 # Object files for target ur5_kin
 ur5_kin_OBJECTS = \
@@ -77,22 +77,22 @@ ur5_kin_OBJECTS = \
 # External object files for target ur5_kin
 ur5_kin_EXTERNAL_OBJECTS =
 
-/home/denis/catkin_ws6/src/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o
-/home/denis/catkin_ws6/src/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make
-/home/denis/catkin_ws6/src/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/denis/catkin_ws6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/denis/catkin_ws6/src/devel/lib/libur5_kin.so"
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ur5_kin.dir/link.txt --verbose=$(VERBOSE)
+/home/denis/catkin_ws6/ws/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o
+/home/denis/catkin_ws6/ws/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make
+/home/denis/catkin_ws6/ws/devel/lib/libur5_kin.so: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/denis/catkin_ws6/ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/denis/catkin_ws6/ws/devel/lib/libur5_kin.so"
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ur5_kin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build: /home/denis/catkin_ws6/src/devel/lib/libur5_kin.so
+universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build: /home/denis/catkin_ws6/ws/devel/lib/libur5_kin.so
 
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -P CMakeFiles/ur5_kin.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/universal_robot/ur_kinematics && $(CMAKE_COMMAND) -P CMakeFiles/ur5_kin.dir/cmake_clean.cmake
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/clean
 
 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/universal_robot/ur_kinematics /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/universal_robot/ur_kinematics /home/denis/catkin_ws6/src/build/universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/universal_robot/ur_kinematics /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/universal_robot/ur_kinematics /home/denis/catkin_ws6/ws/build/universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/depend
 

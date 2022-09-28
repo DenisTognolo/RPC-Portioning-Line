@@ -1,4 +1,4 @@
-prefix=/home/denis/catkin_ws6/src/install
+prefix=/home/denis/catkin_ws6/ws/install
 
 Name: roboticsgroup_upatras_gazebo_plugins
 Description: Description of roboticsgroup_upatras_gazebo_plugins

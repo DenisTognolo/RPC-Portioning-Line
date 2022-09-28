@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/denis/catkin_ws6/src/devel/lib/libroboticsgroup_upatras_gazebo_disable_link_plugin.pdb"
-  "/home/denis/catkin_ws6/src/devel/lib/libroboticsgroup_upatras_gazebo_disable_link_plugin.so"
+  "/home/denis/catkin_ws6/ws/devel/lib/libroboticsgroup_upatras_gazebo_disable_link_plugin.pdb"
+  "/home/denis/catkin_ws6/ws/devel/lib/libroboticsgroup_upatras_gazebo_disable_link_plugin.so"
   "CMakeFiles/roboticsgroup_upatras_gazebo_disable_link_plugin.dir/src/disable_link_plugin.cpp.o"
 )
 

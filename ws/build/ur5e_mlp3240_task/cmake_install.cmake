@@ -1,8 +1,8 @@
-# Install script for directory: /home/denis/catkin_ws6/src/src/ur5e_mlp3240_task
+# Install script for directory: /home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/denis/catkin_ws6/src/install")
+  set(CMAKE_INSTALL_PREFIX "/home/denis/catkin_ws6/ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,37 +38,37 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_task/cmake" TYPE FILE FILES "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_task-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_task/cmake" TYPE FILE FILES "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_task-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/src/devel/share/roseus/ros/ur5e_mlp3240_task")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/ws/devel/share/roseus/ros/ur5e_mlp3240_task")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur5e_mlp3240_task")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur5e_mlp3240_task")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/src/devel/lib/python3/dist-packages/ur5e_mlp3240_task")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/denis/catkin_ws6/ws/devel/lib/python3/dist-packages/ur5e_mlp3240_task")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_task.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_task.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_task/cmake" TYPE FILE FILES "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_task-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_task/cmake" TYPE FILE FILES "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_task-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_task/cmake" TYPE FILE FILES
-    "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_taskConfig.cmake"
-    "/home/denis/catkin_ws6/src/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_taskConfig-version.cmake"
+    "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_taskConfig.cmake"
+    "/home/denis/catkin_ws6/ws/build/ur5e_mlp3240_task/catkin_generated/installspace/ur5e_mlp3240_taskConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_task" TYPE FILE FILES "/home/denis/catkin_ws6/src/src/ur5e_mlp3240_task/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ur5e_mlp3240_task" TYPE FILE FILES "/home/denis/catkin_ws6/ws/src/ur5e_mlp3240_task/package.xml")
 endif()
 

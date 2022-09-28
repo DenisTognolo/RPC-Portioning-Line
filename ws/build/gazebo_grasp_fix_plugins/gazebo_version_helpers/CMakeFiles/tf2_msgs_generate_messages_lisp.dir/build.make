@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/src/src
+CMAKE_SOURCE_DIR = /home/denis/catkin_ws6/ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denis/catkin_ws6/src/build
+CMAKE_BINARY_DIR = /home/denis/catkin_ws6/ws/build
 
 # Utility rule file for tf2_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_mes
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean:
-	cd /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
 
 gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/depend:
-	cd /home/denis/catkin_ws6/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/src/src /home/denis/catkin_ws6/src/src/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/src/build /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/src/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/denis/catkin_ws6/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/denis/catkin_ws6/ws/src /home/denis/catkin_ws6/ws/src/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/ws/build /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers /home/denis/catkin_ws6/ws/build/gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gazebo_grasp_fix_plugins/gazebo_version_helpers/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/depend
 

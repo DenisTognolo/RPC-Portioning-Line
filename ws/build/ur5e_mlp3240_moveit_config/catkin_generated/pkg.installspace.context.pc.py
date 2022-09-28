@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ur5e_mlp3240_moveit_config"
-PROJECT_SPACE_DIR = "/home/denis/catkin_ws6/src/install"
+PROJECT_SPACE_DIR = "/home/denis/catkin_ws6/ws/install"
 PROJECT_VERSION = "0.3.0"
