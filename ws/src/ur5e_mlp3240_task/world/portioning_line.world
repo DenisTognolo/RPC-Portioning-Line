@@ -103,7 +103,7 @@
     	<static>true</static>
     </include>
 
-    <!-- import the Chocolate Bar A1-->
+     <!-- import the Chocolate Bar A1-->
     <include>
     	<uri>model://chocolate_bar</uri>
     	<name>Chocolate_Bar_A1</name>
@@ -116,7 +116,98 @@
     	<!--static>true</static-->
     </include>
 
-    <!-- import the Chocolate Bar B5-->
+    <!-- import the Chocolate Bar A2-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A2</name>
+    	<pose>0.54 0.15 1.22 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar A3-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A3</name>
+    	<pose>0.54 0.0 1.22 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar A5-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_A5</name>
+    	<pose>0.54 -0.30 1.22 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+     
+    <!-- import the Chocolate Bar B1-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B1</name>
+    	<pose>0.54 0.30 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar B2-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B2</name>
+    	<pose>0.54 0.15 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar B3-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B3</name>
+    	<pose>0.54 0.0 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+    <!-- import the Chocolate Bar B4-->
+    <include>
+    	<uri>model://chocolate_bar</uri>
+    	<name>Chocolate_Bar_B4</name>
+    	<pose>0.54 -0.15 1.07 0.0 0.0 1.57</pose>
+    	<scale>1 1 1</scale>
+    	<self_collide>true</self_collide>
+    	<velocity>0 0 0 0 -0 0</velocity>
+      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
+      <wrench>0 0 -0.98 0 -0 0</wrench>
+    	<!--static>true</static-->
+    </include>
+
+     <!-- import the Chocolate Bar B5-->
     <include>
     	<uri>model://chocolate_bar</uri>
     	<name>Chocolate_Bar_B5</name>
@@ -129,26 +220,11 @@
     	<!--static>true</static-->
     </include>
 
-   
-
     <!-- import the Chocolate Bar C1-->
     <include>
     	<uri>model://chocolate_bar</uri>
     	<name>Chocolate_Bar_C1</name>
     	<pose>0.54 0.30 0.92 0.0 0.0 1.57</pose>
-    	<scale>1 1 1</scale>
-    	<self_collide>true</self_collide>
-    	<velocity>0 0 0 0 -0 0</velocity>
-      <acceleration>0 0 -9.8 0 -0 4e-05</acceleration>
-      <wrench>0 0 -0.98 0 -0 0</wrench>
-    	<!--static>true</static-->
-    </include>
-
-    <!-- import the Chocolate Bar C2-->
-    <include>
-    	<uri>model://chocolate_bar</uri>
-    	<name>Chocolate_Bar_C2</name>
-    	<pose>0.54 0.15 0.92 0.0 0.0 1.57</pose>
     	<scale>1 1 1</scale>
     	<self_collide>true</self_collide>
     	<velocity>0 0 0 0 -0 0</velocity>

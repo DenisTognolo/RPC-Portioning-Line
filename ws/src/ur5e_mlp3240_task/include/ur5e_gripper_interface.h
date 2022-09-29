@@ -12,7 +12,9 @@ public:
     moveit::planning_interface::MoveGroupInterface::Plan my_plan_gripper;
 
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
+    std::string scene_frame_id;
     std::vector<std::string> obstacle_ids;
+    std::map<std::string, moveit_msgs::CollisionObject> collision_object_map;
 
     std::string robot_group;
 
@@ -23,6 +25,8 @@ public:
     this->robot_group = robot_group;
     move_group_interface_arm = new moveit::planning_interface::MoveGroupInterface(robot_group);
     move_group_interface_gripper = new moveit::planning_interface::MoveGroupInterface(gripper_group);
+
+    this->scene_frame_id = this->move_group_interface_gripper->getPlanningFrame();
   };
 
   // Collision set-up functions
@@ -37,12 +41,13 @@ public:
     moveit_msgs::CollisionObject collision_object;
     for(int i=0; i < obstacle_names.size(); i++){
       collision_object.id = obstacle_names[i];
-      collision_object.header.frame_id = this->move_group_interface_arm->getPlanningFrame();
+      collision_object.header.frame_id = scene_frame_id;
       collision_object.primitives.push_back(obstacle_primitives[i]);
       collision_object.primitive_poses.push_back(obstacle_poses[i]);
       collision_object.operation = collision_object.ADD;
       
       collision_objects.push_back(collision_object);
+      collision_object_map.insert({obstacle_names[i],collision_object});
     }
     this->planning_scene_interface.applyCollisionObjects(collision_objects);
   }
@@ -52,14 +57,29 @@ public:
 
     std::cout << "Removing " << obstacle_ids.size() << " objects as obstacles..." << std::endl;
     this->planning_scene_interface.removeCollisionObjects(obstacle_ids);
+
   }
 
-  void add_attached_collision_object(moveit_msgs::AttachedCollisionObject attached_collision_object){
-    // Add to the MoveIt environment a given attached collision object
+  void add_attached_collision_object(moveit_msgs::AttachedCollisionObject attached_collision_object, std::string chosen_chocolate_bar_pose_code){
+    // Add to the MoveIt environment a given attached collision object, after removing his collision object
+
+    //remove its object from the collision objects first
+    /*
+    moveit_msgs::CollisionObject to_remove_obj ;
+    to_remove_obj.id = chosen_chocolate_bar_pose_code;
+    to_remove_obj.operation = to_remove_obj.REMOVE;
+    this->planning_scene_interface.applyCollisionObject(to_remove_obj);
+    */
+    
+    this->planning_scene_interface.applyAttachedCollisionObject(attached_collision_object);
+    this->planning_scene_interface.removeCollisionObjects({chosen_chocolate_bar_pose_code});
+    
+    sleep(2.0);
 
     std::cout << "Adding " << attached_collision_object.object.id << std::endl;
-    attached_collision_object.object.header.frame_id = this->move_group_interface_arm->getPlanningFrame(); 
+    attached_collision_object.object.header.frame_id = scene_frame_id;
     this->planning_scene_interface.applyAttachedCollisionObject(attached_collision_object);
+    
   }
 
   void remove_attached_collision_object(moveit_msgs::AttachedCollisionObject attached_collision_object){

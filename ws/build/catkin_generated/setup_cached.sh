@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/denis/catkin_ws6/ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH='/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu'
+export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
 export PWD='/home/denis/catkin_ws6/ws/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/denis/catkin_ws6/ws/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/denis/catkin_ws6/ws/src:$ROS_PACKAGE_PATH"
+export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'

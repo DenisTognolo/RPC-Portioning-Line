@@ -114,6 +114,7 @@ public:
     // Compute the pose that the robot must assume in order to pick the chocolate bar correctly from the shelf, given the chosen chocolate bar origin and the desired orientation
     
     chosen_chocolate_bar_origin.position.x -= chocolate_bar_size[0] * 1/4;
+    chosen_chocolate_bar_origin.position.z += shelf_basement_height/2;
     chosen_chocolate_bar_origin = set_RPY(chosen_chocolate_bar_origin, desired_RPY);  
     return chosen_chocolate_bar_origin;
   }
@@ -161,7 +162,6 @@ public:
     // Compute all the geometry primitives for the collision objects, starting from class parameters
 
     // Obstacle 1 - Table 
-
     table_primitive.type = table_primitive.BOX;
     table_primitive.dimensions.resize(3);
     table_primitive.dimensions[0] = 0.75;
@@ -177,7 +177,7 @@ public:
     shelf_primitive_fat.dimensions.resize(3);
     // Vertical
     shelf_primitive_fat.dimensions[0] = shelf_size[0];
-    shelf_primitive_fat.dimensions[1] = 0.030;
+    shelf_primitive_fat.dimensions[1] = shelf_basement_height*2;
     shelf_primitive_fat.dimensions[2] = shelf_size[2];
 
     shelf_primitive_thin = shelf_primitive_fat;
@@ -199,7 +199,7 @@ public:
     // Horizontal 
     shelf_primitive_fat.dimensions[0] = shelf_size[0];
     shelf_primitive_fat.dimensions[1] = shelf_size[1];
-    shelf_primitive_fat.dimensions[2] = 0.030;
+    shelf_primitive_fat.dimensions[2] = shelf_basement_height*2;
 
     shelf_primitive_thin = shelf_primitive_fat;
     shelf_primitive_thin.dimensions[2] /= 2; 
@@ -305,11 +305,11 @@ public:
     // Obstacle 1 - Shelf 
     geometry_msgs::Pose tmp_shelf_pose = shelf_origin;
     //1 Vertical from Left
-    tmp_shelf_pose.position.y += shelf_size[1]/2;
+    tmp_shelf_pose.position.y += shelf_size[1]/2 - shelf_basement_height/2;
     tmp_shelf_pose.position.z += shelf_size[2]/2;
     obstacle_poses.push_back(tmp_shelf_pose);
     //2
-    tmp_shelf_pose.position.y -= 0.15;
+    tmp_shelf_pose.position.y -= (0.15 - shelf_basement_height/2);
     obstacle_poses.push_back(tmp_shelf_pose);
     //3
     tmp_shelf_pose.position.y -= 0.15;
@@ -318,11 +318,11 @@ public:
 
     //4 Vertical from Right
     tmp_shelf_pose = shelf_origin;
-    tmp_shelf_pose.position.y -= shelf_size[1]/2;
+    tmp_shelf_pose.position.y -= shelf_size[1]/2 + shelf_basement_height/2;
     tmp_shelf_pose.position.z += shelf_size[2]/2;
     obstacle_poses.push_back(tmp_shelf_pose);
     //5
-    tmp_shelf_pose.position.y += 0.15;
+    tmp_shelf_pose.position.y += (0.15 - shelf_basement_height/2);
     obstacle_poses.push_back(tmp_shelf_pose);
     //6
     tmp_shelf_pose.position.y += 0.15;
@@ -330,15 +330,17 @@ public:
 
     //7 Horizontal from bottom
     tmp_shelf_pose = shelf_origin;
+    tmp_shelf_pose.position.z += shelf_basement_height/2;
     obstacle_poses.push_back(tmp_shelf_pose);
     //8
-    tmp_shelf_pose.position.z += 0.15;
+    tmp_shelf_pose.position.z += (0.15 - shelf_basement_height/2);
     obstacle_poses.push_back(tmp_shelf_pose);
     //9
     tmp_shelf_pose.position.z += 0.15;
     obstacle_poses.push_back(tmp_shelf_pose);
     //10
-    tmp_shelf_pose.position.z += 0.15;
+    tmp_shelf_pose = shelf_origin;
+    tmp_shelf_pose.position.z += shelf_size[2];
     obstacle_poses.push_back(tmp_shelf_pose);
 
     // Obstacle 3 - vision box (two basement plus the ring light)
@@ -448,7 +450,7 @@ public:
 
     obstacle_poses.push_back(front_wall_origin);
 
-    for(int i=0; i<chocolate_code_labels.size() ; i++){
+    for(int i=0; i<chocolate_code_labels.size(); i++){
       if (inventory[i] > 0)
         obstacle_poses.push_back(compute_chosen_chocolate_bar_origin(chocolate_code_labels[i]));
     }
@@ -479,7 +481,7 @@ public:
     obstacle_names.push_back("back_wall");
     obstacle_names.push_back("front_wall");
 
-    for(int i=0; i<chocolate_code_labels.size() ; i++){
+    for(int i=0; i<chocolate_code_labels.size(); i++){
       if (inventory[i] > 0)
         obstacle_names.push_back(chocolate_code_labels[i]);
     }

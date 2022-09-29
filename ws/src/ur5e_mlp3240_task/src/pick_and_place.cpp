@@ -67,12 +67,13 @@ int main(int argc, char **argv)
 
   moveit_msgs::AttachedCollisionObject chocolate_bar_attached_collision_object;
   chocolate_bar_attached_collision_object.link_name = "ee_tool";
-  chocolate_bar_attached_collision_object.object.id = chosen_chocolate_bar_pose_code;
+  chocolate_bar_attached_collision_object.object.id = "chosen_chocolate_bar";
   chocolate_bar_attached_collision_object.object.primitives.push_back(chocolate_portioner_env.chocolate_bar_primitive);
   chocolate_bar_attached_collision_object.object.primitive_poses.push_back(chosen_chocolate_bar_origin);
 
-  // Define an approach offsets
-  double approach_offset = chocolate_bar_size[0] * 3 / 4 + 0.01;
+  //std::map<std::string, moveit_msgs::CollisionObject> all_collision_objs = robot_ur5e.planning_scene_interface.getObjects();
+  //chocolate_bar_attached_collision_object.object = all_collision_objs[chosen_chocolate_bar_pose_code];
+
 
   // Setup complete, let's start the task!
   spinner.start();
@@ -93,22 +94,19 @@ int main(int argc, char **argv)
   std::cout << "CLOSING THE GRIPPER..." << std::endl;
   robot_ur5e.move_gripper("close");
 
-  robot_ur5e.add_attached_collision_object(chocolate_bar_attached_collision_object);
+  robot_ur5e.add_attached_collision_object(chocolate_bar_attached_collision_object, chosen_chocolate_bar_pose_code);
 
-  // 5. Place the Chocolate Bar out of the shelf
-  std::cout << "EXITING THE SHELF..." << std::endl;
-  tmp_pose = chosen_chocolate_bar_goal_pose;
-  tmp_pose.position.x -= approach_offset;
-  robot_ur5e.go_to_pose(tmp_pose);
-
-  // 6. Move the Chocolate Bar inside of the vision box
+  /*
+  
+  // 5. Move the Chocolate Bar inside of the vision box
   std::cout << "GOING INSIDE THE VISON BOX..." << std::endl;
   robot_ur5e.go_to_pose(vision_box_hole_goal_pose);
 
+  
   std::cout << "WAITING 1 SEC..." << std::endl;
   ros::Duration(1.0).sleep();
 
-  // 7. Rotate the Chocolate Bar inside of the vision box
+  // 6. Rotate the Chocolate Bar inside of the vision box
   std::cout << "FLIPPING THE CHOCOLATE BAR..." << std::endl;
   robot_ur5e.actuate_one_joint(5, 3.14);
 
@@ -118,25 +116,32 @@ int main(int argc, char **argv)
   std::cout << "RE-FLIPPING THE CHOCOLATE BAR..." << std::endl;
   robot_ur5e.actuate_one_joint(5, -3.14);
 
-  // 8. Move the Chocolate Bar outside of the vision box
-  std::cout << "EXITING THE VISION BOX..." << std::endl;
-  tmp_pose = vision_box_hole_goal_pose;
-  tmp_pose.position.x += approach_offset;
+
+  // 7. Extra Waipoint to highlight collision avoidance
+  tmp_pose=portioning_machine_hole_goal_pose;
+  tmp_pose.position.z += 0.1;
   robot_ur5e.go_to_pose(tmp_pose);
 
-  // 9. Entering the Chocolate Bar inside the portioning machine
+  // 8. Entering the Chocolate Bar inside the portioning machine
   std::cout << "ENTERING THE PORTIONING MACHINE..." << std::endl;
   robot_ur5e.go_to_pose(portioning_machine_hole_goal_pose);
 
   robot_ur5e.remove_attached_collision_object(chocolate_bar_attached_collision_object);
 
-  // 10. Open the gripper
+  // 9. Open the gripper
   std::cout << "OPENING THE GRIPPER..." << std::endl;
   robot_ur5e.move_gripper("open");
+  */
 
-  // 11. Move back to home position
+  // 10. Move back to home position
   std::cout << "GOING BACK TO HOME POSITION..." << std::endl;
   robot_ur5e.go_to_config("home");
+
+  robot_ur5e.remove_attached_collision_object(chocolate_bar_attached_collision_object);
+
+  std::cout << "IM" << std::endl;
+
+  sleep(2.0);
 
   robot_ur5e.remove_collision_objects();
 
