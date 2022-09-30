@@ -56,6 +56,7 @@ int main(int argc, char **argv)
   // ROS_INFO("Got parameter : %s", chosen_chocolate_bar_pose_code.c_str());
 
   // Compute goal positions for the robot
+  chosen_chocolate_bar_pose_code = chocolate_portioner_env.check_chocolate_bar_code(chosen_chocolate_bar_pose_code);
   geometry_msgs::Pose chosen_chocolate_bar_origin = chocolate_portioner_env.compute_chosen_chocolate_bar_origin(chosen_chocolate_bar_pose_code);
   geometry_msgs::Pose chosen_chocolate_bar_goal_pose = chocolate_portioner_env.compute_chosen_chocolate_bar_pose(chosen_chocolate_bar_origin, shelf_desired_approach_RPY);
   geometry_msgs::Pose vision_box_hole_goal_pose = chocolate_portioner_env.compute_vision_box_hole_pose(vision_box_desired_approach_RPY);
@@ -68,6 +69,7 @@ int main(int argc, char **argv)
 
   // Add all environment collision info to the robot
   robot_ur5e.add_collision_objects(obstacle_names, obstacle_primitives, obstacle_poses, chosen_chocolate_bar_pose_code);
+  std::cout << "HERES..." << std::endl;
 
   // Setup complete, let's start the task!
   spinner.start();
@@ -80,7 +82,7 @@ int main(int argc, char **argv)
   std::cout << "OPENING THE GRIPPER..." << std::endl;
   robot_ur5e.move_gripper("open");
 
-  // 3. Move the EE close to the object
+  // 3. Move the EE close to the chocolate bar
   std::cout << "GOING TO THE CHOCOLATE BAR..." << std::endl;
   robot_ur5e.go_to_pose(chosen_chocolate_bar_goal_pose);
 
@@ -107,7 +109,7 @@ int main(int argc, char **argv)
   std::cout << "RE-FLIPPING THE CHOCOLATE BAR..." << std::endl;
   robot_ur5e.actuate_one_joint(5, -3.14);
 
-  // 7. Entering the Chocolate Bar inside the portioning machine
+  // 7. Move the Chocolate Bar inside the portioning machine
   std::cout << "GOING INSIDE THE PORTIONING MACHINE..." << std::endl;
   robot_ur5e.go_to_pose(portioning_machine_hole_goal_pose);
 

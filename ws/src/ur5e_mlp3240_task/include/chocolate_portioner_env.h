@@ -97,9 +97,9 @@ public:
     return pose;
   }
 
-  geometry_msgs::Pose compute_chosen_chocolate_bar_origin(std::string chosen_chocolate_bar_code){
-    // Compute the pose where a chocolate bar is located, given its code
-
+  std::string check_chocolate_bar_code(std::string chosen_chocolate_bar_code){
+    // Check if the typed code exists in the inventory, given it
+ 
     while(shelf_pose_map.count(chosen_chocolate_bar_code) < 1 || shelf_inventory_map[chosen_chocolate_bar_code] < 1){ 
       if (shelf_pose_map.count(chosen_chocolate_bar_code) < 1){
         std::cout << "ERROR: given code does not exist!\nPlease enter another bar code [A->C, 1->5]: "; 
@@ -109,8 +109,13 @@ public:
       }
       std::cin >> chosen_chocolate_bar_code;  
     }
-    tmp_pose = shelf_pose_map[chosen_chocolate_bar_code];
-    return tmp_pose;
+    return chosen_chocolate_bar_code;
+  }
+
+  geometry_msgs::Pose compute_chosen_chocolate_bar_origin(std::string chosen_chocolate_bar_code){
+    // Compute the pose where a chocolate bar is located, given its code
+
+    return shelf_pose_map[chosen_chocolate_bar_code];
   }
 
   geometry_msgs::Pose compute_chosen_chocolate_bar_pose(geometry_msgs::Pose chosen_chocolate_bar_origin, std::vector<double> desired_RPY){
