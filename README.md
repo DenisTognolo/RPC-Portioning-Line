@@ -9,6 +9,9 @@ The aim of this project is to simulate a typical industrial task for a robot man
 
 For all datails, see https://github.com/DenisTognolo/RPC-Portioning-Line/blob/master/docs/report.pdf.
 
+### ROS Version
+We developed this packadge using ROS1 with Noetic distribution, so we can not guarantee that it properly works with another ROS distribution.
+
 ### Download this packadge
 You can simply download this packadge using the following command, typing it inside your bash.
 
