@@ -27,8 +27,8 @@ public:
     move_group_interface_arm = new moveit::planning_interface::MoveGroupInterface(robot_group);
     move_group_interface_gripper = new moveit::planning_interface::MoveGroupInterface(gripper_group);
 
-    move_group_interface_arm->setPlanningTime(10.0);
-    move_group_interface_gripper->setPlanningTime(10.0);
+    move_group_interface_arm->setPlanningTime(100.0);
+    move_group_interface_gripper->setPlanningTime(100.0);
     this->scene_frame_id = this->move_group_interface_gripper->getPlanningFrame();
   };
 

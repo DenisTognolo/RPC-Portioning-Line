@@ -102,10 +102,10 @@ public:
 
     while(shelf_pose_map.count(chosen_chocolate_bar_code) < 1 || shelf_inventory_map[chosen_chocolate_bar_code] < 1){ 
       if (shelf_pose_map.count(chosen_chocolate_bar_code) < 1){
-        std::cout << "ERROR: code does not exist!\nPlease enter another bar code [A->C, 1->5]: "; 
+        std::cout << "ERROR: given code does not exist!\nPlease enter another bar code [A->C, 1->5]: "; 
       }
       else{
-         std::cout << "ERROR: this bars stock out!\nPlease enter another bar code: ";  
+         std::cout << "ERROR: this bar stock out!\nPlease enter another bar code: ";  
       }
       std::cin >> chosen_chocolate_bar_code;  
     }
@@ -298,7 +298,7 @@ public:
     //left box
     portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
     portioning_machine_primitive.dimensions[1] = (portioning_machine_size[1]-portioning_machine_hole_width)/2;
-    portioning_machine_primitive.dimensions[2] = portioning_machine_hole_hight;
+    portioning_machine_primitive.dimensions[2] = portioning_machine_size[2];
 
     obstacle_primitives.push_back(portioning_machine_primitive);
 
@@ -459,14 +459,14 @@ public:
     //left box
     geometry_msgs::Pose left_portioning_machine_pose = portioning_machine_origin;
     left_portioning_machine_pose.position.y -= (portioning_machine_size[1]/2 - portioning_machine_hole_width/2)/2 + portioning_machine_hole_width/2;
-    left_portioning_machine_pose.position.z += portioning_machine_size[2]/2 + portioning_machine_hole_z_offset;
+    left_portioning_machine_pose.position.z += portioning_machine_size[2]/2;
 
     obstacle_poses.push_back(left_portioning_machine_pose);  
 
     //right box
     geometry_msgs::Pose right_portioning_machine_pose = portioning_machine_origin;
     right_portioning_machine_pose.position.y += (portioning_machine_size[1]/2 - portioning_machine_hole_width/2)/2 + portioning_machine_hole_width/2;
-    right_portioning_machine_pose.position.z += portioning_machine_size[2]/2 + portioning_machine_hole_z_offset;
+    right_portioning_machine_pose.position.z += portioning_machine_size[2]/2;
 
     obstacle_poses.push_back(right_portioning_machine_pose);  
 
