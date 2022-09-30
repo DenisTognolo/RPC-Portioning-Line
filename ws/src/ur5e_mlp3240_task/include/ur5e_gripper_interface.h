@@ -15,6 +15,8 @@ public:
     std::string scene_frame_id;
     std::vector<std::string> obstacle_ids;
 
+    moveit_msgs::AttachedCollisionObject grasped_object;
+
     std::string robot_group;
 
     bool success;
@@ -25,60 +27,82 @@ public:
     move_group_interface_arm = new moveit::planning_interface::MoveGroupInterface(robot_group);
     move_group_interface_gripper = new moveit::planning_interface::MoveGroupInterface(gripper_group);
 
+    move_group_interface_arm->setPlanningTime(10.0);
+    move_group_interface_gripper->setPlanningTime(10.0);
     this->scene_frame_id = this->move_group_interface_gripper->getPlanningFrame();
   };
 
-  // Collision set-up functions
+  // Collision setup methods
 
-  void add_collision_objects(std::vector<std::string> obstacle_names, std::vector<shape_msgs::SolidPrimitive> obstacle_primitives, std::vector<geometry_msgs::Pose> obstacle_poses,  std::string chosen_chocolate_bar_pose_code){
-    // Add to the MoveIt environment information about collision objects, given a list of obstacles (names, primitives and origins)
+  void add_collision_objects(std::vector<std::string> obstacle_names, std::vector<shape_msgs::SolidPrimitive> obstacle_primitives, std::vector<geometry_msgs::Pose> obstacle_poses,  std::string grasped_object_name){
+    // Add to the MoveIt planning scene information about collision objects, given a list of obstacles (names, primitives and origins)
+    // Also setup an attached collision object given a grasped object name, that must be present in the obstacle names list
     
-    obstacle_ids = obstacle_names;
     std::vector<moveit_msgs::CollisionObject> collision_objects;
     std::cout << "Adding " << obstacle_names.size() << " objects as obstacles..." << std::endl;
 
+    // Find the grasped objet index
+    auto it = std::find(obstacle_names.begin(), obstacle_names.end(), grasped_object_name);
+    int grasped_object_index = it - obstacle_names.begin();
+
+    // Prepare the attached collision object
+    moveit_msgs::AttachedCollisionObject attached_collision_object;
+    attached_collision_object.link_name = "ee_tool";
+    attached_collision_object.object.id = "grasped_object:" + grasped_object_name;
+    attached_collision_object.object.header.frame_id = scene_frame_id;
+    attached_collision_object.object.primitives.push_back(obstacle_primitives[grasped_object_index]);
+    attached_collision_object.object.primitive_poses.push_back(obstacle_poses[grasped_object_index]);
+    attached_collision_object.object.operation = attached_collision_object.object.ADD;
+
+    // Erease the grasped object from main list
+    obstacle_names.erase(obstacle_names.begin() + grasped_object_index);
+    obstacle_primitives.erase(obstacle_primitives.begin() + grasped_object_index);
+    obstacle_poses.erase(obstacle_poses.begin() + grasped_object_index);
+
+    // Push all objects and apply the collision objects
     moveit_msgs::CollisionObject collision_object;
     for(int i=0; i < obstacle_names.size(); i++){
-      if (obstacle_names[i] != chosen_chocolate_bar_pose_code ){
-        collision_object.id = obstacle_names[i];
-        collision_object.header.frame_id = scene_frame_id;
-        collision_object.primitives.push_back(obstacle_primitives[i]);
-        collision_object.primitive_poses.push_back(obstacle_poses[i]);
-        collision_object.operation = collision_object.ADD;
-        
-        collision_objects.push_back(collision_object);
-      }
+      collision_object.id = obstacle_names[i];
+      collision_object.header.frame_id = scene_frame_id;
+      collision_object.primitives.push_back(obstacle_primitives[i]);
+      collision_object.primitive_poses.push_back(obstacle_poses[i]);
+      collision_object.operation = collision_object.ADD;
+      collision_objects.push_back(collision_object);
     }
+    collision_objects.push_back(attached_collision_object.object);
     this->planning_scene_interface.applyCollisionObjects(collision_objects);
+
+    // Save class parameters
+    this->obstacle_ids = obstacle_names;
+    this->grasped_object = attached_collision_object;
   }
 
   void remove_collision_objects(){
-    // Remove from the MoveIt environment all collision objects
+    // Remove from the MoveIt planning scene all collision objects
 
     std::cout << "Removing " << obstacle_ids.size() << " objects as obstacles..." << std::endl;
     this->planning_scene_interface.removeCollisionObjects(obstacle_ids);
-
   }
 
-  void add_attached_collision_object(moveit_msgs::AttachedCollisionObject attached_collision_object){
-    // Add to the MoveIt environment a given attached collision object, after removing his collision object
+  void attach_grasped_object(){
+    // Attach the grasped object to the robot
 
-    std::cout << "Adding " << attached_collision_object.object.id << std::endl;
-    attached_collision_object.object.header.frame_id = scene_frame_id;
-    this->planning_scene_interface.applyAttachedCollisionObject(attached_collision_object);
-    
+    std::cout << "Attaching " << grasped_object.object.id << std::endl;
+    grasped_object.object.header.frame_id = scene_frame_id;
+    this->planning_scene_interface.applyAttachedCollisionObject(grasped_object);
   }
 
-  void remove_attached_collision_object(moveit_msgs::AttachedCollisionObject attached_collision_object){
-    // Remove from the MoveIt environment a given attached collision object, and his collision object
+  void detach_grasped_object(){
+    // Detach the grasped object to the robot
 
-    std::cout << "Removing " << attached_collision_object.object.id << std::endl;
-    attached_collision_object.object.operation = attached_collision_object.object.REMOVE;
-    this->planning_scene_interface.applyAttachedCollisionObject(attached_collision_object);
-    this->planning_scene_interface.removeCollisionObjects({attached_collision_object.object.id});
+    std::cout << "Detaching " << grasped_object.object.id << std::endl;
+    grasped_object.object.operation = grasped_object.object.REMOVE;
+    this->planning_scene_interface.applyAttachedCollisionObject(grasped_object);
+    this->planning_scene_interface.removeCollisionObjects({grasped_object.object.id});
   }
 
-  // Geometry functions
+  // Geometry methods
+
   geometry_msgs::Pose set_position(std::vector<double> position){
     // Return a pose setting a given position (leaving orientation equal to 0,0,0,0)
 
@@ -113,17 +137,7 @@ public:
 
   bool go_to_pose(geometry_msgs::Pose desired_pose){
     // Force MoveIt to plan a trajectory to move the robot in a given a desired pose and perform it 
-    //std::cout << desired_pose.position <<  std::endl;
-    /*
-    moveit_msgs::RobotTrajectory trajectory;
-    std::vector<geometry_msgs::Pose> waypoints;
-    waypoints.push_back(move_group_interface_arm->getCurrentPose("ee_tool").pose);
-    waypoints.push_back(desired_pose);
-    double fraction = move_group_interface_arm->computeCartesianPath(waypoints, 0.01, 0.0, trajectory);
-    ROS_INFO("Visualizing plan 4 (cartesian path) (%.2f%% acheived)", fraction * 100.0);
-    */
 
-    
     move_group_interface_arm->setPoseTarget(desired_pose);
     success = (move_group_interface_arm->plan(my_plan_arm) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
     ROS_INFO_NAMED("portionig_line", "Visualizing plan 1 (pose goal) %s", success ? "" : "FAILED [go_to_pose]");

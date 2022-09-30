@@ -7,6 +7,7 @@ public:
   geometry_msgs::Pose vision_box_origin;
   geometry_msgs::Pose portioning_machine_origin;
 
+  std::vector<double> table_size;
   std::vector<double> shelf_size;
   std::vector<double> vision_box_size;
   std::vector<double> portioning_machine_size;
@@ -21,8 +22,11 @@ public:
   double vision_box_base_height;
   double vision_box_rod_height;
   double portioning_machine_support_height;
+  double portioning_machine_hole_z_offset;
+  double portioning_machine_hole_width;
+  double portioning_machine_hole_hight;
 
-  std::vector<std::string> chocolate_code_labels;
+  std::vector<std::string> chocolate_codes;
   std::vector<int> inventory;
   std::map<std::string, geometry_msgs::Pose> shelf_pose_map;
   std::map<std::string, int> shelf_inventory_map;
@@ -30,20 +34,16 @@ public:
 
   geometry_msgs::Pose robot_pose;
 
-  std::vector<std::string> obstacle_names;
-  std::vector<shape_msgs::SolidPrimitive> obstacle_primitives;
-  std::vector<geometry_msgs::Pose> obstacle_poses;
-
-  shape_msgs::SolidPrimitive table_primitive;
   shape_msgs::SolidPrimitive chocolate_bar_primitive;
 
-  chocolate_portioner_env(geometry_msgs::Pose robot_pose, geometry_msgs::Pose shelf_origin, geometry_msgs::Pose vision_box_origin, geometry_msgs::Pose portioning_machine_origin, std::vector<double> shelf_size, std::vector<double> vision_box_size, std::vector<double> ring_light_size, std::vector<double> portioning_machine_size, std::vector<double> chocolate_bar_size, std::vector<int> inventory)
+  chocolate_portioner_env(geometry_msgs::Pose robot_pose, geometry_msgs::Pose shelf_origin, geometry_msgs::Pose vision_box_origin, geometry_msgs::Pose portioning_machine_origin, std::vector<double> table_size, std::vector<double> shelf_size, std::vector<double> vision_box_size, std::vector<double> ring_light_size, std::vector<double> portioning_machine_size, std::vector<double> chocolate_bar_size, std::vector<std::string> chocolate_codes, std::vector<int> inventory)
   {
     this->robot_pose =  robot_pose;
     this->shelf_origin = shelf_origin;
     this->vision_box_origin = vision_box_origin;
     this->portioning_machine_origin = portioning_machine_origin;
 
+    this->table_size = table_size;
     this->shelf_size = shelf_size;
     this->vision_box_size = vision_box_size;
     this->ring_light_size = ring_light_size;
@@ -58,12 +58,15 @@ public:
     this->vision_box_rod_height = vision_box_size[5];
     this->ring_light_support_height = ring_light_size[3];
     this->portioning_machine_support_height = portioning_machine_size[3];
+    this->portioning_machine_hole_z_offset = portioning_machine_size[4];
+    this->portioning_machine_hole_width = portioning_machine_size[5];
+    this->portioning_machine_hole_hight = portioning_machine_size[6];
 
     this->inventory = inventory;
-    this->chocolate_code_labels = {"A1","A2","A3","A4","A5","B1","B2","B3","B4","B5","C1","C2","C3","C4","C5"};
+    this->chocolate_codes = chocolate_codes;
     
-    if(inventory.size() != chocolate_code_labels.size()){
-      std::cout << "Error: this enviroment must specify "<< chocolate_code_labels.size() <<" stocks!" << std::endl;
+    if(inventory.size() != chocolate_codes.size()){
+      std::cout << "Error: this enviroment must specify "<< chocolate_codes.size() <<" stocks!" << std::endl;
     }
     // set origin.position.z at the base of the object (over the support) and in robot reference frame
 
@@ -95,7 +98,7 @@ public:
   }
 
   geometry_msgs::Pose compute_chosen_chocolate_bar_origin(std::string chosen_chocolate_bar_code){
-    // Compute the pose where a chosen chocolate bar is located, given its code
+    // Compute the pose where a chocolate bar is located, given its code
 
     while(shelf_pose_map.count(chosen_chocolate_bar_code) < 1 || shelf_inventory_map[chosen_chocolate_bar_code] < 1){ 
       if (shelf_pose_map.count(chosen_chocolate_bar_code) < 1){
@@ -111,7 +114,7 @@ public:
   }
 
   geometry_msgs::Pose compute_chosen_chocolate_bar_pose(geometry_msgs::Pose chosen_chocolate_bar_origin, std::vector<double> desired_RPY){
-    // Compute the pose that the robot must assume in order to pick the chocolate bar correctly from the shelf, given the chosen chocolate bar origin and the desired orientation
+    // Compute the pose that the robot has to assume in order to pick the chocolate bar correctly from the shelf, given the chosen chocolate bar origin and the desired orientation
     
     chosen_chocolate_bar_origin.position.x -= chocolate_bar_size[0] * 1/4;
     chosen_chocolate_bar_origin.position.z += shelf_basement_height/2;
@@ -134,8 +137,8 @@ public:
     tmp_pose = set_RPY(portioning_machine_origin, desired_RPY);
     tmp_pose.position.x += portioning_machine_size[0]/2; 
     tmp_pose.position.z += portioning_machine_size[2]/2;
-    //Add the hole offset (the difference along z-axis between the center of the portioning machine and its hole)
-    tmp_pose.position.z += 0.06;
+    //Add the portioning_machine_hole_z_offset (the difference along z-axis between the center of the portioning machine and its hole)
+    tmp_pose.position.z += portioning_machine_hole_z_offset;
     return tmp_pose;
   }
 
@@ -151,22 +154,58 @@ public:
         tmp_pose.position.z += shelf_basement_height + chocolate_bar_size[2]/2;
         tmp_pose.position.y += 0.15*i;
         tmp_pose.position.z += 0.15*j;
-        shelf_pose_map[chocolate_code_labels[c]] = tmp_pose;
-        shelf_inventory_map[chocolate_code_labels[c]] = inventory[c];
+        shelf_pose_map[chocolate_codes[c]] = tmp_pose;
+        shelf_inventory_map[chocolate_codes[c]] = inventory[c];
         c++;
       }
     }
   }
 
-  void compute_obstacle_primitives(){
+  std::vector<std::string> compute_obstacle_names(){
+    std::vector<std::string> obstacle_names;
+    obstacle_names.push_back("Table");
+    obstacle_names.push_back("Shelf_1");
+    obstacle_names.push_back("Shelf_2");
+    obstacle_names.push_back("Shelf_3");
+    obstacle_names.push_back("Shelf_4");
+    obstacle_names.push_back("Shelf_5");
+    obstacle_names.push_back("Shelf_6");
+    obstacle_names.push_back("Shelf_7");
+    obstacle_names.push_back("Shelf_8");
+    obstacle_names.push_back("Shelf_9");
+    obstacle_names.push_back("Shelf_10");
+    obstacle_names.push_back("vision_box_lower_base");
+    obstacle_names.push_back("vision_box_upper_base");
+    obstacle_names.push_back("vision_box_left_rod");
+    obstacle_names.push_back("vision_box_right_rod");
+    obstacle_names.push_back("vision_box_back_rod");
+    obstacle_names.push_back("ring_light_base");
+    obstacle_names.push_back("upper_box_portioning_machine");
+    obstacle_names.push_back("lower_box_portioning_machine");
+    obstacle_names.push_back("left_box_portioning_machine");
+    obstacle_names.push_back("right_box_portioning_machine");
+    obstacle_names.push_back("back_wall");
+    obstacle_names.push_back("front_wall");
+
+    for(int i=0; i<chocolate_codes.size(); i++){
+      if (inventory[i] > 0)
+        obstacle_names.push_back(chocolate_codes[i]);
+    }
+     return obstacle_names;
+  }
+
+  std::vector<shape_msgs::SolidPrimitive> compute_obstacle_primitives(){
     // Compute all the geometry primitives for the collision objects, starting from class parameters
 
+    std::vector<shape_msgs::SolidPrimitive> obstacle_primitives;
+
     // Obstacle 1 - Table 
+    shape_msgs::SolidPrimitive table_primitive;
     table_primitive.type = table_primitive.BOX;
     table_primitive.dimensions.resize(3);
-    table_primitive.dimensions[0] = 0.75;
-    table_primitive.dimensions[1] = 0.75;
-    table_primitive.dimensions[2] = 0.74;
+    table_primitive.dimensions[0] = table_size[0];
+    table_primitive.dimensions[1] = table_size[1];
+    table_primitive.dimensions[2] = table_size[2];
 
     obstacle_primitives.push_back(table_primitive);
 
@@ -239,7 +278,7 @@ public:
     //ring light
     vision_box_primitive.dimensions = {ring_light_size[2], ring_light_size[0]/2};
     obstacle_primitives.push_back(vision_box_primitive);
-
+    
     // Obstacle 4 - portioning machine
     //upper box
     shape_msgs::SolidPrimitive portioning_machine_primitive;
@@ -247,18 +286,19 @@ public:
     portioning_machine_primitive.dimensions.resize(3);
     portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
     portioning_machine_primitive.dimensions[1] = portioning_machine_size[1];
-    portioning_machine_primitive.dimensions[2] = 0.025;
+    portioning_machine_primitive.dimensions[2] = portioning_machine_size[2]-(portioning_machine_size[2]/2 + portioning_machine_hole_z_offset+portioning_machine_hole_hight/2);
 
     obstacle_primitives.push_back(portioning_machine_primitive);
 
     //lower box
-    portioning_machine_primitive.dimensions[2] = 0.2;
+    portioning_machine_primitive.dimensions[0] = 0.01;
+    portioning_machine_primitive.dimensions[2] = portioning_machine_size[2]/2 + portioning_machine_hole_z_offset - portioning_machine_hole_hight/2;
     obstacle_primitives.push_back(portioning_machine_primitive); 
 
     //left box
     portioning_machine_primitive.dimensions[0] = portioning_machine_size[0];
-    portioning_machine_primitive.dimensions[1] = 0.075;
-    portioning_machine_primitive.dimensions[2] = 0.065;
+    portioning_machine_primitive.dimensions[1] = (portioning_machine_size[1]-portioning_machine_hole_width)/2;
+    portioning_machine_primitive.dimensions[2] = portioning_machine_hole_hight;
 
     obstacle_primitives.push_back(portioning_machine_primitive);
 
@@ -285,20 +325,24 @@ public:
     chocolate_bar_primitive.dimensions[1] = chocolate_bar_size[1];
     chocolate_bar_primitive.dimensions[2] = chocolate_bar_size[2]/2; 
         
-    for(int i=0; i<chocolate_code_labels.size() ; i++){
+    for(int i=0; i<chocolate_codes.size() ; i++){
       if (inventory[i] > 0)
         obstacle_primitives.push_back(chocolate_bar_primitive);
     }
+
+    return obstacle_primitives;
   }
 
-  void compute_obstacle_poses(){
+  std::vector<geometry_msgs::Pose> compute_obstacle_poses(){
     // Compute all the poses for the collision objects, starting from class parameters
+
+    std::vector<geometry_msgs::Pose> obstacle_poses;
 
     // Obstacle 1 - Table  
     geometry_msgs::Pose table_pose;
     table_pose.position.x = 0.0 - robot_pose.position.x;
     table_pose.position.y = 0.0 - robot_pose.position.y;
-    table_pose.position.z = (table_primitive.dimensions[2]/2 - robot_pose.position.z);
+    table_pose.position.z = (table_size[2]/2 - robot_pose.position.z);
 
     obstacle_poses.push_back(table_pose);
 
@@ -401,37 +445,28 @@ public:
     // Obstacle 4 - portioning machine
     //upper box
     geometry_msgs::Pose upper_portioning_machine_pose = portioning_machine_origin;
-    upper_portioning_machine_pose.position.x -= robot_pose.position.x;
-    upper_portioning_machine_pose.position.y -= robot_pose.position.y;
-    upper_portioning_machine_pose.position.z -= robot_pose.position.z;
-    upper_portioning_machine_pose.position.z += (portioning_machine_size[2] + portioning_machine_support_height) - 0.05;
+    upper_portioning_machine_pose.position.z += (portioning_machine_size[2]/2 + portioning_machine_hole_z_offset + portioning_machine_hole_hight/2) + (portioning_machine_size[2] - (portioning_machine_size[2]/2 + portioning_machine_hole_z_offset + portioning_machine_hole_hight/2))/2 ;
 
     obstacle_poses.push_back(upper_portioning_machine_pose);  
 
     //lower box
     geometry_msgs::Pose lower_portioning_machine_pose = portioning_machine_origin;
-    lower_portioning_machine_pose.position.x -= robot_pose.position.x;
-    lower_portioning_machine_pose.position.y -= robot_pose.position.y;
-    lower_portioning_machine_pose.position.z -= robot_pose.position.z;
-    lower_portioning_machine_pose.position.z += (portioning_machine_size[2]/4 + portioning_machine_support_height);
+    lower_portioning_machine_pose.position.x += (portioning_machine_size[0]/2 - 0.01/2);
+    lower_portioning_machine_pose.position.z += (portioning_machine_size[2]/2 + portioning_machine_hole_z_offset - portioning_machine_hole_hight/2)/2;
 
     obstacle_poses.push_back(lower_portioning_machine_pose);  
 
     //left box
     geometry_msgs::Pose left_portioning_machine_pose = portioning_machine_origin;
-    left_portioning_machine_pose.position.x -= robot_pose.position.x;
-    left_portioning_machine_pose.position.y -= robot_pose.position.y - 0.1125;
-    left_portioning_machine_pose.position.z -= robot_pose.position.z;
-    left_portioning_machine_pose.position.z += (portioning_machine_size[2] + portioning_machine_support_height) -0.095;
+    left_portioning_machine_pose.position.y -= (portioning_machine_size[1]/2 - portioning_machine_hole_width/2)/2 + portioning_machine_hole_width/2;
+    left_portioning_machine_pose.position.z += portioning_machine_size[2]/2 + portioning_machine_hole_z_offset;
 
     obstacle_poses.push_back(left_portioning_machine_pose);  
 
     //right box
     geometry_msgs::Pose right_portioning_machine_pose = portioning_machine_origin;
-    right_portioning_machine_pose.position.x -= robot_pose.position.x;
-    right_portioning_machine_pose.position.y -= robot_pose.position.y + 0.1125;
-    right_portioning_machine_pose.position.z -= robot_pose.position.z;
-    right_portioning_machine_pose.position.z += (portioning_machine_size[2] + portioning_machine_support_height) -0.095;
+    right_portioning_machine_pose.position.y += (portioning_machine_size[1]/2 - portioning_machine_hole_width/2)/2 + portioning_machine_hole_width/2;
+    right_portioning_machine_pose.position.z += portioning_machine_size[2]/2 + portioning_machine_hole_z_offset;
 
     obstacle_poses.push_back(right_portioning_machine_pose);  
 
@@ -450,41 +485,10 @@ public:
 
     obstacle_poses.push_back(front_wall_origin);
 
-    for(int i=0; i<chocolate_code_labels.size(); i++){
+    for(int i=0; i<chocolate_codes.size(); i++){
       if (inventory[i] > 0)
-        obstacle_poses.push_back(compute_chosen_chocolate_bar_origin(chocolate_code_labels[i]));
+        obstacle_poses.push_back(compute_chosen_chocolate_bar_origin(chocolate_codes[i]));
     }
+    return  obstacle_poses;
   }
-
-  void compute_obstacle_names(){
-    obstacle_names.push_back("Table");
-    obstacle_names.push_back("Shelf_1");
-    obstacle_names.push_back("Shelf_2");
-    obstacle_names.push_back("Shelf_3");
-    obstacle_names.push_back("Shelf_4");
-    obstacle_names.push_back("Shelf_5");
-    obstacle_names.push_back("Shelf_6");
-    obstacle_names.push_back("Shelf_7");
-    obstacle_names.push_back("Shelf_8");
-    obstacle_names.push_back("Shelf_9");
-    obstacle_names.push_back("Shelf_10");
-    obstacle_names.push_back("vision_box_lower_base");
-    obstacle_names.push_back("vision_box_upper_base");
-    obstacle_names.push_back("vision_box_left_rod");
-    obstacle_names.push_back("vision_box_right_rod");
-    obstacle_names.push_back("vision_box_back_rod");
-    obstacle_names.push_back("ring_light_base");
-    obstacle_names.push_back("upper_box_portioning_machine");
-    obstacle_names.push_back("lower_box_portioning_machine");
-    obstacle_names.push_back("left_box_portioning_machine");
-    obstacle_names.push_back("right_box_portioning_machine");
-    obstacle_names.push_back("back_wall");
-    obstacle_names.push_back("front_wall");
-
-    for(int i=0; i<chocolate_code_labels.size(); i++){
-      if (inventory[i] > 0)
-        obstacle_names.push_back(chocolate_code_labels[i]);
-    }
-  }
-
 };
