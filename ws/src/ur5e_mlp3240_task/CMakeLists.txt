@@ -46,3 +46,7 @@ include_directories(SYSTEM ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${EIGEN3_
 add_executable(pick_and_place src/pick_and_place.cpp)
 target_include_directories(pick_and_place PRIVATE include)
 target_link_libraries(pick_and_place ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+
+add_executable(pick_and_place_basic_collisions src/pick_and_place_basic_collisions.cpp)
+target_include_directories(pick_and_place_basic_collisions PRIVATE include)
+target_link_libraries(pick_and_place_basic_collisions ${catkin_LIBRARIES} ${Boost_LIBRARIES})
