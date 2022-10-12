@@ -57,5 +57,10 @@ rosrun ur5e_mlp3240_task pick_and_place _code:=XX
 ```
 Where XX is the code of the desired chocolate bar (ex: A1, A1, ... ,A5, ... ,C5).
 
+To apreciate the functionality of the attached collision object solution, we also provide you an older version of this project, in which we didn't use the attached collision object but we added more waypoints for the task. You can simply launch it with the following command:
+```bash
+rosrun ur5e_mlp3240_task pick_and_place_basic_collisions _code:=XX
+```
+
 ### TODO List:
 * Due to lack of information about geometry and mass of each mlp3240 links, the inertias, that you can find inside src/mlp3240/urdf/mlp3240.xacro, are not the real ones.
