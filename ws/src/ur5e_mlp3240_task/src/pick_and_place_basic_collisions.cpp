@@ -68,8 +68,8 @@ int main(int argc, char **argv)
   std::vector<shape_msgs::SolidPrimitive> obstacle_primitives = chocolate_portioner_env.compute_obstacle_primitives();
   std::vector<geometry_msgs::Pose> obstacle_poses = chocolate_portioner_env.compute_obstacle_poses();
 
-  std::vector<bool> less_collision_mask = {1,  1, 0, 0, 1, 0, 0, 1, 0, 0, 1,  0, 0, 1, 1, 0, 0,  1, 1, 1, 1, 1,  1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };                                        
-                                       //table//shelf                        //vision box        //portio.   //wall//chocolate bars
+  std::vector<bool> less_collision_mask = {1,  1, 0, 0, 1, 0, 0, 1, 0, 0, 1,  0, 0, 1, 1, 0, 0,  1, 1, 1, 1,  1, 1,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };                                        
+                                       //table//shelf                        //vision box        //portio.   //wall //chocolate bars
 
   std::vector<moveit_msgs::CollisionObject> collision_objects;
   moveit_msgs::CollisionObject collision_object;
